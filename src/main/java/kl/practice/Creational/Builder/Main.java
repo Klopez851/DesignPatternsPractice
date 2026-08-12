@@ -203,5 +203,95 @@ package kl.practice.Creational.Builder;
  * whether the design naturally scales.
  */
 
+import java.util.Scanner;
+
 public class Main {
+
+    public static void main(String[] args) {
+        String cpu;
+        int ram,storage;
+        String gpu = null;
+        boolean wifi= false;
+        boolean bluetooth = false;
+
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to Build-A-PC! Lets make a pc for you!");
+        System.out.println("What CPU would you like your pc to have? dont be shy we dont got a budget :3 ");
+
+        cpu = scanner.nextLine().strip();
+
+        System.out.println("Wonderful!");
+        System.out.println("Now do you want a GPU? (y/n)");
+
+        if(scanner.nextLine().strip().equalsIgnoreCase("n")){
+            System.out.println("Aight loser ur loss");
+        }else{
+            System.out.println("Cool! What GPU are u thinking :D? ");
+            gpu = scanner.nextLine().strip();
+        }
+        System.out.println("Great, now tell me how much ram you want in your super awesome and cool pc ");
+        ram = Integer.parseInt(scanner.nextLine().strip());
+
+        System.out.println("ok ok now how much storage 0_o? ");
+        storage = Integer.parseInt(scanner.nextLine().strip());
+
+        System.out.println("you want access to the internet? (y/n)");
+        wifi = scanner.nextLine().strip().equalsIgnoreCase("y")? true : false;
+
+        System.out.println("how about bluetooth, you want that? (y/n)");
+        wifi = scanner.nextLine().strip().equalsIgnoreCase("y")? true : false;
+
+        Computer.ComputerBuilder builder= new Computer.ComputerBuilder();
+
+        builder
+                .setCPU(cpu)
+                .setRam(ram)
+                .setStorage(storage);
+
+        if(gpu != null){
+            builder.setGPU(gpu);
+        }
+        if(wifi){
+            builder.setWifi(wifi);
+        }
+        if(bluetooth){
+            builder.setBluetooth(bluetooth);
+        }
+
+        Computer computer = builder.build();
+
+        System.out.println("Building computer...ouch my finger...hold on a sec...Done! :D");
+
+        System.out.println("Here is your beautiful wonderful amazing scruptious pc <3");
+        System.out.printf("CPU: %s, GPU: %s, Ram: %d, Storage: %d, Wifi: %s, Bluetooth: %s",
+                computer.getCpu(),
+                computer.getGpu(),
+                computer.getRam(),
+                computer.getStorage(),
+                computer.isWifi(),
+                computer.isBluetooth());
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
