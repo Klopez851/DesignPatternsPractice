@@ -207,14 +207,19 @@ import java.util.Scanner;
 
 public class Main {
 
+    /*
+     * To make this a proper program, i'd add try catches and do whiles, but its a simple practice
+     * exercise that will only be used by me, therefore all that isnt a necesity per say
+     */
     public static void main(String[] args) {
-        String cpu;
-        int ram,storage;
+        // VARIABLES //
+        String cpu, os, motherboard;
+        int ram,storage, powerSupplyWatts =500;
         String gpu = null;
-        boolean wifi= false;
-        boolean bluetooth = false;
+        boolean wifi, bluetooth, liquidCooling, rgb;
 
 
+        //get user input
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to Build-A-PC! Lets make a pc for you!");
@@ -241,37 +246,71 @@ public class Main {
         wifi = scanner.nextLine().strip().equalsIgnoreCase("y")? true : false;
 
         System.out.println("how about bluetooth, you want that? (y/n)");
-        wifi = scanner.nextLine().strip().equalsIgnoreCase("y")? true : false;
+        bluetooth = scanner.nextLine().strip().equalsIgnoreCase("y")? true : false;
 
+        System.out.println("ADDITIONAL CONFIGS");
+        System.out.println("What motherboard would u like?");
+        motherboard = scanner.nextLine();
+
+        System.out.println("Any specific OS?");
+        os= scanner.nextLine();
+
+        System.out.println("Specific wattage requirements for the PSU? (y/n)");
+        if(scanner.nextLine().equalsIgnoreCase("y")){
+            System.out.println("how many watts?");
+            powerSupplyWatts = Integer.parseInt(scanner.nextLine());
+        }
+
+        System.out.println("Do we want liquid cooling 0_o? (y/n)");
+        liquidCooling = scanner.nextLine().strip().equalsIgnoreCase("y")? true : false;
+
+        if(liquidCooling){
+            System.out.println("did u choose a gpu earlier? (y/n");
+            if(scanner.nextLine().equalsIgnoreCase("n")){
+                System.out.println("ok we kinda need one for liquid cooling, so what gpu u want?");
+                gpu = scanner.nextLine();
+            }
+            System.out.println("on onto the next thing then");
+
+        }
+
+        System.out.println("RGB? (if u say no please proceed to the nearest exit)(y/n)");
+        rgb = scanner.nextLine().strip().equalsIgnoreCase("y")? true : false;
+
+        //build computer based on input
         Computer.ComputerBuilder builder= new Computer.ComputerBuilder();
 
         builder
                 .setCPU(cpu)
                 .setRam(ram)
-                .setStorage(storage);
-
-        if(gpu != null){
-            builder.setGPU(gpu);
-        }
-        if(wifi){
-            builder.setWifi(wifi);
-        }
-        if(bluetooth){
-            builder.setBluetooth(bluetooth);
-        }
-
+                .setStorage(storage)
+                .setGPU(gpu)
+                .setWifi(wifi)
+                .setBluetooth(bluetooth)
+                .setLiquidCooling(liquidCooling)
+                .setOS(os)
+                .setMotherboard(motherboard)
+                .setRgb(rgb)
+                .setPowerSupplyWatts(powerSupplyWatts);
         Computer computer = builder.build();
 
+        // show built object to user
         System.out.println("Building computer...ouch my finger...hold on a sec...Done! :D");
 
         System.out.println("Here is your beautiful wonderful amazing scruptious pc <3");
-        System.out.printf("CPU: %s, GPU: %s, Ram: %d, Storage: %d, Wifi: %s, Bluetooth: %s",
+        System.out.printf("CPU: %s, GPU: %s, Ram: %d, Storage: %d, Wifi: %s, Bluetooth: %s, " +
+                        "OS; %s, m: %s, psw: %d, l: %s, r:%s",
                 computer.getCpu(),
                 computer.getGpu(),
                 computer.getRam(),
                 computer.getStorage(),
                 computer.isWifi(),
-                computer.isBluetooth());
+                computer.isBluetooth(),
+                computer.getOs(),
+                computer.getMotherboard(),
+                computer.getPowerSupplyWatts(),
+                computer.isLiquidCooling(),
+                computer.isRbg());
     }
 
 }

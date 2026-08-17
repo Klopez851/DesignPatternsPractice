@@ -4,17 +4,23 @@ import lombok.Getter;
 
 @Getter
 public class Computer {
-    private String cpu, gpu;
-    private int ram,storage;
-    private boolean wifi, bluetooth;
+    private String cpu, gpu, os, motherboard;
+    private int ram,storage,powerSupplyWatts;
+    private boolean wifi, bluetooth, liquidCooling,rbg;
 
-    private Computer(String cpu, String gpu, int ram, int storage, boolean wifi, boolean bluetooth){
+    private Computer(String cpu, String gpu, String os, String motherboard, int ram, int storage, int powerSupplyWatts,
+                     boolean wifi, boolean bluetooth, boolean liquidCooling, boolean rbg){
         this.cpu = cpu;
         this.gpu = gpu;
+        this.os = os;
+        this.motherboard = motherboard;
         this.ram = ram;
         this.storage = storage;
+        this.powerSupplyWatts=powerSupplyWatts;
         this.wifi=wifi;
         this.bluetooth=bluetooth;
+        this.liquidCooling=liquidCooling;
+        this.rbg=rbg;
     }
 
     /// //////////////////
@@ -26,15 +32,21 @@ public class Computer {
     public static class ComputerBuilder implements Builder{
 
         private static final int MIN_RAM_VALUE = 0;
-        private static int MIN_STORAGE_VALUE = 0;
+        private static final int MIN_STORAGE_VALUE = 0;
+        private static final int MIN_WATT_VALUE= 300;
 
 
         private String cpu = null;
-        private String gpu = "No GPU";
+        private String gpu = null ;
+        private String os = "Windows";
+        private String motherboard = "MSI B760M GAMING PLUS WIFI"; //looked up most popular motherboard
         private int ram = MIN_RAM_VALUE;
         private int storage = MIN_STORAGE_VALUE;
-        private boolean wifi = true;
-        private boolean bluetooth = true;
+        private int powerSupplyWatts = 500;
+        private boolean wifi = false;
+        private boolean bluetooth = false;
+        private boolean liquidCooling = false;
+        private boolean rgb = false;
 
         public ComputerBuilder(){}
 
@@ -75,12 +87,57 @@ public class Computer {
         }
 
         @Override
+        public Builder setOS(String os) {
+            this.os =os;
+            return this;
+        }
+
+        @Override
+        public Builder setMotherboard(String motherboard) {
+            this.motherboard=motherboard;
+            return this;
+        }
+
+        @Override
+        public Builder setPowerSupplyWatts(int powerSupplyWatts) {
+            this.powerSupplyWatts=powerSupplyWatts;
+            return this;
+        }
+
+        @Override
+        public Builder setLiquidCooling(boolean liquidCooling) {
+            this.liquidCooling=liquidCooling;
+            return this;
+        }
+
+        @Override
+        public Builder setRgb(boolean rgb) {
+            this.rgb=rgb;
+            return this;
+        }
+
+        @Override
         public Computer build() {
             if(cpu==null || cpu.isBlank()){
                 throw  new IllegalArgumentException("CPU cannot be empty or null, set one using ComputerBuilder.setCPU()");
             }
-            if(gpu.isBlank()){
+            if(os.isBlank()){
+                os="Windows";
+            }
+
+            if(liquidCooling){
+                if(gpu==null){
+                    throw new IllegalArgumentException("In order to have liquid cooling a gpu must be provided");
+                }
+            }
+
+            if(gpu==null){
                 gpu = "No GPU";
+            }
+
+            if(powerSupplyWatts<MIN_WATT_VALUE){
+                throw new IllegalArgumentException("power supply wattage must have a value bigger than "+MIN_WATT_VALUE+
+                        " set one using ComputerBuilder.setPowerSupplyWatts()");
             }
 
             if(ram <= MIN_RAM_VALUE){
@@ -92,7 +149,8 @@ public class Computer {
                 throw  new IllegalArgumentException("Storage must have a value bigger than "+MIN_STORAGE_VALUE+
                         " set one using ComputerBuilder.setStorage()");
             }
-            Computer computer = new Computer(cpu,gpu,ram,storage,wifi,bluetooth);
+            Computer computer = new Computer(cpu,gpu,os,motherboard,ram,storage,
+                    powerSupplyWatts,wifi,bluetooth,liquidCooling,rgb);
 
             return computer;
         }
