@@ -300,11 +300,27 @@ package kl.practice.Creational.Factory;
  *     WHY is separating those responsibilities useful?
  */
 
+import kl.practice.Creational.Factory.NotificationService.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        NotificationService service = new EmailNotificationService();
+
+        service.notifyUser("ur order shipped");
+
+        service = new SMSNotificationService();
+
+        service.notifyUser("Your order shipped!");
+
+        service = new PushNotificationService();
+
+        service.notifyUser("Your oder has shipped <3");
+
+        service = new SlackNotificationService();
+
+        service.notifyUser("Yet another order being set ur way");
     }
     
 }
