@@ -279,4 +279,19 @@ package kl.practice.Creational.Singleton;
  */
 
 public class Main {
+
+    public static void main(String[] args) {
+        ApplicationConfigs config = ApplicationConfigs.getInstance();
+        ApplicationConfigs anotherConfig = ApplicationConfigs.getInstance();
+
+        System.out.println(config);
+        System.out.println(anotherConfig);
+        System.out.println();
+        config.setDebugMode(true);
+        System.out.println(anotherConfig);
+        anotherConfig.setApiKey("yet_another_api_key");
+        System.out.println(config);
+        System.out.println(config.equals(anotherConfig));
+
+    }
 }
