@@ -9,7 +9,6 @@ public interface Enemy {
     Enemy clone();
 
     void setName(String name);
-    void setWeapon(String weapon);
     void setArmor(String armor);
 
     void setHealth(int health);
@@ -20,7 +19,7 @@ public interface Enemy {
 
 
     String getName();
-    String getWeapon();
+    Weapon getWeapon();
     String getArmor();
 
     int getHealth();

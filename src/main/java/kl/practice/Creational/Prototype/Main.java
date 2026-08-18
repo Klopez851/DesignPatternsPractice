@@ -342,25 +342,33 @@ public class Main {
     public static void main(String[] args) {
         GoblinEnemyTemplate goblinTemplate = new GoblinEnemyTemplate();
 
-        Enemy goblin = goblinTemplate.clone();
+        Enemy goblin3 = goblinTemplate.clone();
         Enemy goblin1 = goblinTemplate.clone();
         Enemy goblin2 = goblinTemplate.clone();
 
         goblin1.setName("goblin1");
         goblin2.setName("goblin2");
 
-        System.out.println(goblin.toString());
+        System.out.println(goblin3.toString());
         System.out.println(goblin1.toString());
         System.out.println(goblin2.toString());
 
         goblin1.getAbilities().add("poison arrow");
         System.out.println();
 
-        System.out.println(goblin.toString());
+        System.out.println(goblin3.toString());
         System.out.println(goblin1.toString());
         System.out.println(goblin2.toString());
 
-        System.out.println(goblin.equals(goblinTemplate));
+        System.out.println(goblin3.getWeapon().damage);
+
+        Enemy goblin = EnemyRegistry.create("goblin");
+        Enemy goblinA = EnemyRegistry.create("goblin");
+
+        goblin.getWeapon().damage=10000;
+
+        System.out.println(goblin);
+        System.out.println(goblinA);
 
     }
 }
