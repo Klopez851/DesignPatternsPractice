@@ -260,5 +260,68 @@ package kl.practice.Creational.AbstractFactory;
  * actually trying to preserve?
  */
 
+import kl.practice.Creational.AbstractFactory.Buttons.Button;
+import kl.practice.Creational.AbstractFactory.Checkboxes.Checkbox;
+import kl.practice.Creational.AbstractFactory.UIFactories.MacUIFactory;
+import kl.practice.Creational.AbstractFactory.UIFactories.UIFactory;
+import kl.practice.Creational.AbstractFactory.TextFields.Textfield;
+import kl.practice.Creational.AbstractFactory.UIFactories.WindowsUIFactory;
+
+
 public class Main {
+    public static void main(String[] args) {
+        UIFactory factory = new WindowsUIFactory();
+
+        Button windowsButton = factory.createButton();
+        Checkbox windowsCheckbox = factory.createCheckbox();
+        Textfield windowsTextfield = factory.createTextfield();
+
+        windowsButton.render();
+        windowsButton.setText("i am but a lowly button forgive me");
+        windowsButton.onClick();
+
+        System.out.println();
+
+        windowsCheckbox.render();
+        windowsCheckbox.setChecked(true);
+
+        System.out.println();
+
+        windowsTextfield.render();
+        windowsTextfield.setText("i am the mighty textfield, fear me!");
+        windowsTextfield.setSize(100, 100);
+
+        factory = new MacUIFactory();
+        System.out.println("\n===============================================================");
+
+        Button macButton = factory.createButton();
+        Checkbox macCheckbox = factory.createCheckbox();
+        Textfield macTextfield = factory.createTextfield();
+
+        macButton.render();
+        macButton.setText("i am a disgusting mac button");
+        macButton.onClick();
+
+        System.out.println();
+
+        macCheckbox.render();
+        macCheckbox.setChecked(true);
+
+        System.out.println();
+
+        macTextfield.render();
+        macTextfield.setText("i am mac extfield, i guess ew");
+        macTextfield.setSize(100, 100);
+
+        System.out.println("\n=======================================================");
+
+        UIManager uiManager = new UIManager(factory);
+        uiManager.createUI();
+
+        System.out.println("=======================================================");
+        factory = new WindowsUIFactory();
+        uiManager.setFactory(factory);
+        uiManager.createUI();
+
+    }
 }
