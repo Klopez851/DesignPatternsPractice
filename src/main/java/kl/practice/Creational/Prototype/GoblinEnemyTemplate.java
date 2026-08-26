@@ -24,7 +24,7 @@ public class GoblinEnemyTemplate implements Enemy{
         List<String> abilities = new ArrayList<>(this.abilities);
         return new GoblinEnemyTemplate(this.name,this.armor,new Weapon(this.weapon.name, this.weapon.damage), this.health,this.attack,
                 this.defense,this.speed,abilities);
-    }
+}
 
     public String toString(){
         return "Goblin - Name: "+name+" weapon: "+weapon+" Armor: "+armor+" health: "+health+" attack: "+attack+
