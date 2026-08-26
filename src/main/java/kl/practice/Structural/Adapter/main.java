@@ -61,4 +61,12 @@ package kl.practice.Structural.Adapter;
  */
 
 public class main {
+
+    public static void main(String[] args) {
+
+        TemperatureSensor sensor = new EuropeanTemperatureSensorAdapter();
+
+        System.out.println(sensor.getTemperatureCelsius());
+
+    }
 }
