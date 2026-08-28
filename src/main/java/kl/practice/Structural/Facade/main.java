@@ -22,7 +22,7 @@ package kl.practice.Structural.Facade;
  *     amplifier.on();
  *     amplifier.setVolume(20);
  *     screen.down();
- *     lights.dim(10);
+ *     lights.changeBrightness(10);
  *     dvdPlayer.on();
  *     dvdPlayer.play();
  *
@@ -69,4 +69,12 @@ package kl.practice.Structural.Facade;
  */
 
 public class main {
+
+    public static void main(String[] args) {
+        HomeTheaterFacade facade =new HomeTheaterFacade();
+
+        facade.watchMovie("Wall-E");
+        System.out.println("==============================================================================");
+        facade.endMovie();
+    }
 }
