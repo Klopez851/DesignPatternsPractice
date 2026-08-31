@@ -76,5 +76,7 @@ public class main {
         facade.watchMovie("Wall-E");
         System.out.println("==============================================================================");
         facade.endMovie();
+        System.out.println("==============================================================================");
+        facade.listenToMusic("Abbey Road");
     }
 }

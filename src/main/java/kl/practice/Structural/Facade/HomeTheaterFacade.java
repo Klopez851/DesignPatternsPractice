@@ -31,4 +31,15 @@ public class HomeTheaterFacade {
         amplifier.off();
         projector.off();
     }
+
+    public void listenToMusic(String song){
+        //we assume we want to watch the music video/lyrics on the screen
+        projector.on();
+        projector.setInput("DVD");
+        amplifier.on();
+        amplifier.setVolume(20);
+        screen.down();
+        dvdPlayer.on();
+        dvdPlayer.play(song);
+    }
 }
