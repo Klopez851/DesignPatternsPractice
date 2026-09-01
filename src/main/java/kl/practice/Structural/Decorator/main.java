@@ -70,5 +70,53 @@ package kl.practice.Structural.Decorator;
  * ============================================================
  */
 
+import java.util.Scanner;
+
 public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Coffee coffee = new CoffeeImpl("Coffee", 3.00);
+        boolean milk, mocha, whippedCream, soyMilk, caramel;
+
+        System.out.println(coffee);
+
+        System.out.println("milk? true/false: ");
+        milk = Boolean.parseBoolean(scanner.nextLine());
+
+        System.out.println("soy milk? true/false: ");
+        soyMilk = Boolean.parseBoolean(scanner.nextLine());
+
+        System.out.println("Mocha? true/false: ");
+        mocha = Boolean.parseBoolean(scanner.nextLine());
+
+        System.out.println("Whipped cream? true/false: ");
+        whippedCream = Boolean.parseBoolean(scanner.nextLine());
+
+        System.out.println("Caramel? true/false: ");
+        caramel = Boolean.parseBoolean(scanner.nextLine());
+
+
+
+        if(milk){
+            coffee = new MilkDecorator(coffee);
+        }
+
+        if(soyMilk){
+            coffee = new SoyMilkDecorator(coffee);
+        }
+
+        if(mocha){
+            coffee = new MochaDecorator(coffee);
+        }
+
+        if (whippedCream){
+            coffee = new WhippedCreamDecorator(coffee);
+        }
+
+        if(caramel){
+            coffee = new CaramelDecorator(coffee);
+        }
+
+        System.out.println("ur total is: " + coffee.getCost()+ " for a "+coffee.toString());
+    }
 }
