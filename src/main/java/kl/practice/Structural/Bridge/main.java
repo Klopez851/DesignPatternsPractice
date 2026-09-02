@@ -52,5 +52,33 @@ package kl.practice.Structural.Bridge;
  */
 
 
+import kl.practice.Structural.Bridge.renderer.OpenGLRenderer;
+import kl.practice.Structural.Bridge.renderer.RasterRenderer;
+import kl.practice.Structural.Bridge.renderer.VectorRenderer;
+import kl.practice.Structural.Bridge.shape.Circle;
+import kl.practice.Structural.Bridge.shape.Hexagon;
+import kl.practice.Structural.Bridge.shape.Square;
+import kl.practice.Structural.Bridge.shape.Triangle;
+
 public class main {
+    public static void main(String[] args) {
+        VectorRenderer vectorRenderer = new VectorRenderer();
+        RasterRenderer rasterRenderer = new RasterRenderer();
+        OpenGLRenderer openGLRenderer = new OpenGLRenderer();
+
+        Circle circle = new Circle(vectorRenderer, 10);
+        circle.draw();
+
+        Square square = new Square(vectorRenderer, 10);
+        square.draw();
+
+        Triangle triangle = new Triangle(rasterRenderer, 5);
+        triangle.draw();
+
+        Hexagon hexagon = new Hexagon(openGLRenderer, 4);
+        hexagon.draw();
+
+        square.setRenderer(openGLRenderer);
+        square.draw();
+    }
 }
