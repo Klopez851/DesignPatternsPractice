@@ -67,4 +67,14 @@ package kl.practice.Structural.Proxy;
  */
 
 public class main {
+
+    public static void main(String[] args) {
+        Image image = new RealImageProxy("validUser");
+
+        image.display("Huge_image.jpg");
+        image.display("Huge_image.jpg");
+        image.display("Huge_image.jpg");
+
+    }
+
 }
