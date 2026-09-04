@@ -64,5 +64,25 @@ package kl.practice.Structural.Composite;
  * ============================================================
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class main {
+    public static void main(String[] args) {
+
+        List<FileSystem> photoList = new ArrayList<>();
+        photoList.add(new File(500, "a.txt"));
+        photoList.add(new File(700, "b.txt"));
+        FileSystem photos = new Directory(photoList);
+
+        List<FileSystem> files = new ArrayList<>();
+        files.add(new File(10, "a.jpg"));
+        files.add(new File(20, "b.jpg"));
+        files.add(photos);
+        FileSystem root = new Directory(files);
+
+        System.out.println(root.getSize());
+        root.print();
+
+    }
 }
