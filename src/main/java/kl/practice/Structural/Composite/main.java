@@ -73,16 +73,18 @@ public class main {
         List<FileSystem> photoList = new ArrayList<>();
         photoList.add(new File(500, "a.txt"));
         photoList.add(new File(700, "b.txt"));
-        FileSystem photos = new Directory(photoList);
+        FileSystem photos = new Directory(photoList, "photos");
 
         List<FileSystem> files = new ArrayList<>();
         files.add(new File(10, "a.jpg"));
         files.add(new File(20, "b.jpg"));
         files.add(photos);
-        FileSystem root = new Directory(files);
+        FileSystem root = new Directory(files, "root");
 
         System.out.println(root.getSize());
         root.print();
+        root.delete();
+        System.out.println(root.fileCount());
 
     }
 }
