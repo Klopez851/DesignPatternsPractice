@@ -330,7 +330,7 @@ It should:
     - close it
 
 Think about whether "authenticate" belongs as another
-hook in the base class.
+hook in the base class assuming authentication is a required step in the processing algorithm
 
 Ask yourself:
 
@@ -403,4 +403,16 @@ After finishing both exercises, answer these in your own words:
 ============================================================
 */
 public class main {
+
+    public static void main(String[] args) {
+        DocumentProcessor pdfProcessor = new PdfProcessor();
+        DocumentProcessor csvProcessor = new CsvProcessor();
+        DocumentProcessor xmlProcessor = new XmlProcessor();
+        DocumentProcessor securePdfProcessor = new SecurePdfProcessor();
+
+        pdfProcessor.processDocument();
+        csvProcessor.processDocument();
+        xmlProcessor.processDocument();
+        securePdfProcessor.processDocument();
+    }
 }
