@@ -1,4 +1,10 @@
 package kl.practice.Behavioral.Command;
+
+import kl.practice.Behavioral.Command.Commands.CloseGarageDoorCommand;
+import kl.practice.Behavioral.Command.Commands.OpenGarageDoorCommand;
+import kl.practice.Behavioral.Command.Commands.TurnLightOffCommand;
+import kl.practice.Behavioral.Command.Commands.TurnLightOnCommand;
+
 /*
 ============================================================
 COMMAND DESIGN PATTERN — EXERCISE 1
@@ -215,29 +221,6 @@ before executing any command?
 
 Handle that case cleanly.
 
-
-EXTRA BONUS:
-
-Instead of remembering only ONE command, make the remote
-support multiple levels of undo.
-
-Example:
-
-    command 1 -> execute
-    command 2 -> execute
-    command 3 -> execute
-
-Then:
-
-    undo -> undoes command 3
-    undo -> undoes command 2
-    undo -> undoes command 1
-
-
-Think about what data structure would naturally help you
-implement this.
-
-
 ============================================================
 FINAL REFLECTION
 ============================================================
@@ -283,4 +266,27 @@ After finishing both exercises, answer these in your own words:
 ============================================================
 */
 public class main {
+    public static void main(String[] args) {
+        Light light = new Light();
+        GarageDoor garageDoor = new GarageDoor();
+        RemoteControl remoteControl = new RemoteControl();
+
+        remoteControl.pressUndo();
+        remoteControl.setCommand(new TurnLightOnCommand(light));
+        remoteControl.pressButton();
+        remoteControl.pressUndo();
+
+        remoteControl.setCommand(new TurnLightOffCommand(light));
+        remoteControl.pressButton();
+        remoteControl.pressUndo();
+
+        remoteControl.setCommand(new OpenGarageDoorCommand(garageDoor));
+        remoteControl.pressButton();
+        remoteControl.pressUndo();
+
+        remoteControl.setCommand(new CloseGarageDoorCommand(garageDoor));
+        remoteControl.pressButton();
+        remoteControl.pressUndo();
+    }
+
 }
