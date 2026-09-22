@@ -1,4 +1,9 @@
 package kl.practice.Behavioral.ChainOfResponsibility;
+
+import kl.practice.Behavioral.ChainOfResponsibility.Handlers.Handler;
+import kl.practice.Behavioral.ChainOfResponsibility.Handlers.Level1Support;
+import kl.practice.Behavioral.ChainOfResponsibility.Handlers.TechnicalSupport;
+
 /*
 ============================================================
 CHAIN OF RESPONSIBILITY — EXERCISE 1
@@ -200,4 +205,15 @@ After finishing both exercises, answer these in your own words:
 ============================================================
 */
 public class main {
+    public static void main(String[] args) {
+        Handler chain = new TechnicalSupport();
+
+        chain.handle(new SupportRequest(
+                "My account is hacked",
+                Priority.CRITICAL,
+                TechnicalLevel.NONTECHNICAL
+        ));
+
+        System.out.println("request lifecycle has ended");
+    }
 }
