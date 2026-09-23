@@ -259,4 +259,51 @@ After finishing both exercises, answer these in your own words:
 ============================================================
 */
 public class main {
+    public static void main(String[] args) {
+        Playlist playlist = new SongPlaylist();
+
+        playlist.addItem(new Song("Song A", "Artist A"));
+        playlist.addItem(new Song("Song B", "Artist B"));
+        playlist.addItem(new Song("Song C", "Artist C"));
+        playlist.addItem(new Song("Song D", "Artist A"));
+        playlist.addItem(new Song("Song E", "Artist B"));
+        playlist.addItem(new Song("Song F", "Artist C"));
+        playlist.addItem(new Song("Song G", "Artist A"));
+        playlist.addItem(new Song("Song H", "Artist B"));
+        playlist.addItem(new Song("Song I", "Artist C"));
+
+        Iterator<Song> iterator = playlist.createIterator();
+
+        while (iterator.hasNext()) {
+            Song song = iterator.getNext();
+
+            System.out.println(song.getTitle());
+        }
+
+        Iterator<Song> reverseIterator =
+                playlist.createReverseIterator();
+
+        while (reverseIterator.hasNext()) {
+            Song song = reverseIterator.getNext();
+
+            System.out.println(song.getTitle());
+        }
+
+        while (iterator.hasNext()) {
+            Song song = iterator.getNext();
+
+            System.out.println(song.getTitle());
+        }
+
+        Iterator<Song> artistIterator =
+                playlist.createArtistIterator();
+
+        while (artistIterator.hasNext()) {
+            Song song = artistIterator.getNext();
+
+            if(song != null) {
+                System.out.println(song.getTitle());
+            }
+        }
+    }
 }
