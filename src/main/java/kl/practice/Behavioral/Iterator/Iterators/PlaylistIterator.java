@@ -1,12 +1,12 @@
-package kl.practice.Behavioral.Iterator;
+package kl.practice.Behavioral.Iterator.Iterators;
 
 
-import lombok.AllArgsConstructor;
+import kl.practice.Behavioral.Iterator.Iterator;
 
 import java.util.List;
 
 
-public class PlaylistIterator<T> implements Iterator<T>{
+public class PlaylistIterator<T> implements Iterator<T> {
     private final List<T> songs;
     private int currentIndex= 0;
 

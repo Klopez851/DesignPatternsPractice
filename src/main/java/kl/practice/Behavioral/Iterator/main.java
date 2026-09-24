@@ -1,4 +1,8 @@
 package kl.practice.Behavioral.Iterator;
+
+import kl.practice.Behavioral.Iterator.Playlists.Playlist;
+import kl.practice.Behavioral.Iterator.Playlists.SongPlaylist;
+
 /*
 ============================================================
 ITERATOR DESIGN PATTERN — EXERCISE 1

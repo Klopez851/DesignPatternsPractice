@@ -262,25 +262,6 @@ You could simply print:
 
 Don't worry about implementing message persistence yet.
 
-
-EXTRA BONUS:
-
-Imagine your chat application eventually supports:
-
-    - private messages
-    - group messages
-    - notifications
-    - user status changes
-    - moderation
-    - message logging
-
-Think about whether putting ALL of this logic directly into
-ChatRoom would eventually create a huge class.
-
-If so, what responsibilities could potentially be extracted
-into other objects?
-
-
 ============================================================
 FINAL REFLECTION
 ============================================================
@@ -319,4 +300,19 @@ After finishing both exercises, answer these in your own words:
 ============================================================
 */
 public class main {
+    public static void main(String[] args) {
+        ChatRoom chatRoom = new ChatRoom();
+
+        User alice = new User("alice", chatRoom);
+        User bob = new User("bob", chatRoom);
+        User charlie = new User("charlie", chatRoom);
+        bob.setStatus(false);
+
+        chatRoom.registerUser(alice);
+        chatRoom.registerUser(bob);
+        chatRoom.registerUser(charlie);
+
+        alice.sendMessage("Hello everyone!");
+        alice.sendPrivateMethod("bob", "Hello to you specially <3");
+    }
 }

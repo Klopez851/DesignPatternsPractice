@@ -1,8 +1,11 @@
-package kl.practice.Behavioral.Iterator;
+package kl.practice.Behavioral.Iterator.Iterators;
+
+import kl.practice.Behavioral.Iterator.Iterator;
+import kl.practice.Behavioral.Iterator.Song;
 
 import java.util.List;
 
-public class ArtistIterator<T> implements Iterator<T>{
+public class ArtistIterator<T> implements Iterator<T> {
     private final List<Song> items;
     private final String desiredArtist;
     private int currentIndex = 0;
