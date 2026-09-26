@@ -351,4 +351,43 @@ After finishing both exercises, answer these in your own words:
 package kl.practice.Behavioral.Memento;
 
 public class main {
+    public static void main(String[] args) {
+        Document document = new Document();
+        History history = new History();
+
+        document.setText("Hello");
+
+        history.save(document.save());
+
+        document.setText("Hello World");
+
+        history.save(document.save());
+
+        document.setText("Hello World!");
+        history.save(document.save());
+
+
+        document.restore(history.undo());
+        System.out.println(document.getText());
+
+        document.restore(history.undo());
+        System.out.println(document.getText());
+
+        document.restore(history.undo());
+        System.out.println(document.getText());
+
+        document.restore(history.undo());
+
+        document.restore(history.redo());
+        System.out.println(document.getText());
+
+        document.restore(history.redo());
+        System.out.println(document.getText());
+
+        document.restore(history.redo());
+        System.out.println(document.getText());
+
+        document.restore(history.redo());
+
+    }
 }
