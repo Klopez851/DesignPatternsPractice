@@ -1,4 +1,13 @@
 package kl.practice.Behavioral.Visitor;
+
+import kl.practice.Behavioral.Visitor.Employees.Designer;
+import kl.practice.Behavioral.Visitor.Employees.Developer;
+import kl.practice.Behavioral.Visitor.Employees.Intern;
+import kl.practice.Behavioral.Visitor.Employees.Manager;
+import kl.practice.Behavioral.Visitor.Visitors.BonusVisitor;
+import kl.practice.Behavioral.Visitor.Visitors.ReportVisitor;
+import kl.practice.Behavioral.Visitor.Visitors.TaxVisitor;
+
 /*
 ============================================================
 VISITOR DESIGN PATTERN — EXERCISE 1
@@ -410,4 +419,30 @@ After finishing both exercises, answer these in your own words:
 ============================================================
 */
 public class main {
+    public static void main(String[] args) {
+        Developer developer = new Developer("Kate", "java");
+        Manager manager = new Manager("Sarah", 5);
+        Designer designer = new Designer("Elanor", "Figma");
+        Intern intern = new Intern("Stephan", 3);
+
+        BonusVisitor bonusVisitor = new BonusVisitor();
+        ReportVisitor reportVisitor = new ReportVisitor();
+        TaxVisitor taxVisitor = new TaxVisitor();
+
+        developer.accept(bonusVisitor);
+        manager.accept(bonusVisitor);
+        designer.accept(bonusVisitor);
+
+        developer.accept(reportVisitor);
+        manager.accept(reportVisitor);
+        designer.accept(reportVisitor);
+
+        developer.accept(taxVisitor);
+        manager.accept(taxVisitor);
+        designer.accept(taxVisitor);
+
+        intern.accept(bonusVisitor);
+        intern.accept(reportVisitor);
+        intern.accept(taxVisitor);
+    }
 }
