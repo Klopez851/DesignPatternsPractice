@@ -143,3 +143,14 @@ before you can start understanding the actual logic.
 
 Overall, this project gave me a better appreciation for programming as more than just writing code that works. There's also a lot of 
 thought that goes into how that code is organized, how easy it is for someone else to understand, and how well it can adapt as a project grows.
+
+# How I Learned
+
+I wanted this learning process to be more than just following along with examples, so I used a few different resources throughout the process,
+with each one serving a different purpose.
+
+YouTube — I used videos to learn the theory behind each design pattern and get a general understanding of what problem each pattern is trying to solve.
+
+AI — Once I had a basic understanding of a pattern, I used AI to give me exercises and scenarios to implement myself (can be found in the main class of each design pattern as a comment at the start of the file). This gave me a way to actually practice the patterns instead of just reading about them.
+
+Design Patterns: Elements of Reusable Object-Oriented Software — I also have the original Gang of Four (GoF) book, which I plan to read as I continue learning. My goal is to use it to go deeper into the ideas behind the patterns and better understand the reasoning that led to them.
