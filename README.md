@@ -29,100 +29,100 @@ The Java code shows the actual implementation, while the UML diagrams make it ea
 ## Creational Patterns
 <!-- add overall purpose of this type of pattern -->
 Abstract Factory
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Abstract Factory UML diagram here -->
 Builder
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Builder UML diagram here -->
 Factory Method
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Factory Method UML diagram here -->
 Prototype
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Prototype UML diagram here -->
 Singleton
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Singleton UML diagram here -->
 ## Structural Patterns
-<!-- add overall purpose of this type of pattern -->
+<!-- add overall Purpose of this type of pattern -->
 Adapter
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Adapter UML diagram here -->
 Bridge
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Bridge UML diagram here -->
 Composite
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Composite UML diagram here -->
 Decorator
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Decorator UML diagram here -->
 Facade
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Facade UML diagram here -->
 Flyweight
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Flyweight UML diagram here -->
 Proxy
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Proxy UML diagram here -->
 ## Behavioral Patterns
-<!-- add overall purpose of this type of pattern -->
+<!-- add overall Purpose of this type of pattern -->
 Chain of Responsibility
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Chain of Responsibility UML diagram here -->
 Command
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Command UML diagram here -->
 Interpreter
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Interpreter UML diagram here -->
 Iterator
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Iterator UML diagram here -->
 Mediator
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Mediator UML diagram here -->
 Memento
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Memento UML diagram here -->
 Observer
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Observer UML diagram here -->
 State
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add State UML diagram here -->
 Strategy
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Strategy UML diagram here -->
 Template Method
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Template Method UML diagram here -->
 Visitor
-- purpose/intent:
-- ideal usage:
+- Purpose/intent:
+- Ideal usage:
 <!-- Add Visitor UML diagram here -->
 
 # What I Learned
