@@ -1,4 +1,14 @@
-package kl.practice.Behavioral.Strategy;
+package kl.practice.Behavioral.Strategy.ShoppingApplication;
+
+import kl.practice.Behavioral.Strategy.DistanceCalculator.Strategies.CyclingRouteStrategy;
+import kl.practice.Behavioral.Strategy.DistanceCalculator.Strategies.DrivingRouteStrategy;
+import kl.practice.Behavioral.Strategy.DistanceCalculator.Strategies.NavigationService;
+import kl.practice.Behavioral.Strategy.DistanceCalculator.Strategies.WalkingRouteStrategy;
+import kl.practice.Behavioral.Strategy.ShoppingApplication.Strategies.BankTransferPayment;
+import kl.practice.Behavioral.Strategy.ShoppingApplication.Strategies.CreditCardPayment;
+import kl.practice.Behavioral.Strategy.ShoppingApplication.Strategies.CryptoPayment;
+import kl.practice.Behavioral.Strategy.ShoppingApplication.Strategies.PayPalPayment;
+
 /*
 ============================================================
 STRATEGY DESIGN PATTERN — EXERCISE 1
@@ -208,7 +218,7 @@ Create:
 
     2. CreditCardPayment
 
-    3. PayPalPayment
+    3. CreditCardPayment
 
     4. BankTransferPayment
 
@@ -351,4 +361,45 @@ After finishing both exercises, answer these in your own words:
 ============================================================
 */
 public class main {
+    public static void main(String[] args) {
+        Checkout checkout = new Checkout();
+
+        checkout.setStrategy(
+                new CreditCardPayment()
+        );
+
+        checkout.pay(100.00);
+
+        checkout.setStrategy(
+                new PayPalPayment()
+        );
+
+        checkout.pay(150.00);
+
+        checkout.setStrategy(
+                new BankTransferPayment()
+        );
+
+        checkout.pay(200.00);
+
+        checkout.setStrategy(
+                new CryptoPayment()
+        );
+
+        checkout.pay(250.00);
+
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.addItem(10.10);
+        shoppingCart.addItem(20.20);
+        shoppingCart.addItem(70.70);
+
+        shoppingCart.getCheckout().setStrategy(new PayPalPayment());
+        shoppingCart.checkout();
+        shoppingCart.getCheckout().setStrategy(new CryptoPayment());
+        shoppingCart.checkout();
+        shoppingCart.getCheckout().setStrategy(new CreditCardPayment());
+        shoppingCart.checkout();
+        shoppingCart.getCheckout().setStrategy(new BankTransferPayment());
+        shoppingCart.checkout();
+    }
 }
