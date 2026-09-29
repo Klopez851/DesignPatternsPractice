@@ -33,7 +33,7 @@ The Java code shows the actual implementation, while the UML diagrams make it ea
 - Ideal usage:
 <!-- Add Abstract Factory UML diagram here -->
 ### Builder
-- Purpose/intent: Pattern that separated the construction process of a complex object from its representation, allowing different variations of an objects to be made from the same construction process
+- Purpose/intent: pattern that separates the construction process of a complex object from its representation, allowing different variations of an objects to be made from the same construction process
 - Ideal usage: when constructing and object requires a lot of parameters and many are optional
 
 | Pros | Cons |
