@@ -28,23 +28,26 @@ The Java code shows the actual implementation, while the UML diagrams make it ea
 
 ## Creational Patterns
 <!-- add overall purpose of this type of pattern -->
-Abstract Factory
+### Abstract Factory
 - Purpose/intent:
 - Ideal usage:
 <!-- Add Abstract Factory UML diagram here -->
-Builder
+### Builder
 - Purpose/intent:
 - Ideal usage:
 <!-- Add Builder UML diagram here -->
-Factory Method
+
+### Factory Method
 - Purpose/intent:
 - Ideal usage:
 <!-- Add Factory Method UML diagram here -->
-Prototype
+
+### Prototype
 - Purpose/intent:
 - Ideal usage:
 <!-- Add Prototype UML diagram here -->
-Singleton
+
+### Singleton
 - Purpose/intent: Pattern ensures class has only 1 instance and provides a global access point to itself
 - Ideal usage: when it makes logical sense for there to be one instance of something (i.e. "will having two of these cause problems?")
 
