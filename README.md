@@ -53,7 +53,9 @@ Singleton
 | - provides a single well defined entry point to an instance | Testing may require complex setup - |
 | - excels at resource & state management| pattern can get complex in multi-threaded environments -|
 | - allows for lazy initialization of resources| often seen as an 'anti-pattern' because it tends to add complexity to code -|
+
 ![Singleton UML Diagram](Assets/Singleton.svg)
+
 ## Structural Patterns
 <!-- add overall Purpose of this type of pattern -->
 Adapter
