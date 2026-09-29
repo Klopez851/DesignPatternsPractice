@@ -6,6 +6,8 @@ import lombok.Setter;
 @Setter
 @Getter
 public class ApplicationConfigs {
+    //static makes an attribute have one existence shared by the class, not per object
+    //private makes it so that only an instance of this class can access this shared variable
     private static ApplicationConfigs instance;
 
     private String databaseUrl = "a_db_url";

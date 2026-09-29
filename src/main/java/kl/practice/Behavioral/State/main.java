@@ -1,4 +1,7 @@
 package kl.practice.Behavioral.State;
+
+import kl.practice.Behavioral.State.States.NoCoinState;
+
 /*
 ============================================================
 STATE DESIGN PATTERN — EXERCISE 1
@@ -358,4 +361,47 @@ After finishing both exercises, answer these in your own words:
 ============================================================
 */
 public class main {
+    public static void main(String[] args) {
+        VendingMachine machine = new VendingMachine(2);
+
+        machine.insertCoin();
+        machine.insertCoin();
+        machine.insertCoin();
+        machine.insertCoin();
+        machine.selectProduct("choice");
+
+        machine.insertCoin();
+        machine.insertCoin();
+        machine.insertCoin();
+        machine.insertCoin();
+        machine.selectProduct("choice");
+
+        machine.insertCoin();
+        machine.insertCoin();
+        machine.insertCoin();
+        machine.insertCoin();
+        machine.selectProduct("choice");
+
+
+        machine.setState(new NoCoinState(machine));
+        machine.insertCoin();
+        machine.insertCoin();
+        machine.insertCoin();
+        machine.insertCoin();
+
+        machine.startMaintenance();
+
+        machine.insertCoin();
+        machine.insertCoin();
+        machine.insertCoin();
+        machine.insertCoin();
+        machine.selectProduct("choice");
+
+        machine.endMaintenance();
+
+        machine.setMachineOutOfOrder();
+        machine.insertCoin();
+        machine.selectProduct("choice");
+        machine.endMachineOutOfOrder();
+    }
 }
