@@ -45,9 +45,15 @@ Prototype
 - Ideal usage:
 <!-- Add Prototype UML diagram here -->
 Singleton
-- Purpose/intent:
-- Ideal usage:
-<!-- Add Singleton UML diagram here -->
+- Purpose/intent: Pattern ensures class has only 1 instance and provides a global access point to itself
+- Ideal usage: when it makes logical sense for there to be one instance of something (i.e. "will having two of these cause problems?")
+
+| Pros | Cons |
+|:---------|--------------:|
+| - provides a single well defined entry point to an instance | Testing may require complex setup - |
+| - excels at resource & state management| pattern can get complex in multi-threaded environments -|
+| - allows for lazy initialization of resources| often seen as an 'anti-pattern' because it tends to add complexity to code -|
+![Singleton UML Diagram](Assets/Singleton.svg)
 ## Structural Patterns
 <!-- add overall Purpose of this type of pattern -->
 Adapter
