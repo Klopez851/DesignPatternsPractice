@@ -310,7 +310,7 @@ public class Main {
         System.out.println();
 
         macTextfield.render();
-        macTextfield.setText("i am mac extfield, i guess ew");
+        macTextfield.setText("i am mac textfield i guess, ew");
         macTextfield.setSize(100, 100);
 
         System.out.println("\n=======================================================");

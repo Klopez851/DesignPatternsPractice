@@ -1,7 +1,9 @@
 package kl.practice.Creational.AbstractFactory.Buttons;
 
 import kl.practice.Creational.AbstractFactory.SupportingInterfaces.RetinaRenderingSupport;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class MacButton implements Button, RetinaRenderingSupport {
     @Override
     public void render() {

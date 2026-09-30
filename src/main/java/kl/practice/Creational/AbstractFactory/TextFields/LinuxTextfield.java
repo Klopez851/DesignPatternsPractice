@@ -1,5 +1,8 @@
 package kl.practice.Creational.AbstractFactory.TextFields;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 public class LinuxTextfield implements Textfield{
     @Override
     public void render() {

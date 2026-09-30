@@ -1,5 +1,8 @@
 package kl.practice.Creational.AbstractFactory.Menus;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 public class LinuxMenu implements Menu{
     @Override
     public void render() {

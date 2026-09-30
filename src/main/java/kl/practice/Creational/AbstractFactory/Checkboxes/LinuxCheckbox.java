@@ -1,5 +1,8 @@
 package kl.practice.Creational.AbstractFactory.Checkboxes;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 public class LinuxCheckbox implements Checkbox{
     @Override
     public void render() {

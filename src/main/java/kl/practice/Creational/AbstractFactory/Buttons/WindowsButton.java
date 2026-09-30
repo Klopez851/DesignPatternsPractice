@@ -1,7 +1,9 @@
 package kl.practice.Creational.AbstractFactory.Buttons;
 
 import kl.practice.Creational.AbstractFactory.SupportingInterfaces.WindowsAnimation;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class WindowsButton implements Button, WindowsAnimation {
     @Override
     public void render() {
@@ -16,7 +18,6 @@ public class WindowsButton implements Button, WindowsAnimation {
     @Override
     public void setText(String text) {
         System.out.println("setting text to: "+text);
-
     }
 
     @Override

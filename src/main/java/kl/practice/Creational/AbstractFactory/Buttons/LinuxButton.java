@@ -1,7 +1,9 @@
 package kl.practice.Creational.AbstractFactory.Buttons;
 
 import kl.practice.Creational.AbstractFactory.SupportingInterfaces.WaylandSupport;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class LinuxButton implements Button, WaylandSupport {
     @Override
     public void render() {
