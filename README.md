@@ -33,12 +33,12 @@ The Java code shows the actual implementation, while the UML diagrams make it ea
 - Purpose/intent:Patterns that provides an interface for creating families of related/dependent objects w/o specifying their concrete class
 - Ideal usage: when you are constantly creating multiple related objects that need to work together
  
-  | Pros                                                                                  |                                                                           Cons |
-  |:--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------:|
-  | - Promotes consistency, since objects made with factory are compatible and consistent |                                                    Increased code complexity - |
-  | - Separates creation logic from main code                                             | Limited use scope, best suited for specific sets of related families/objects - |
-  | - Increases code flexibility and scalability                                          |                                                                                |
-  | - Promotes loose coupling                                                             |                                                                                |
+  | Pros                                                                                |                                                                           Cons |
+  |:------------------------------------------------------------------------------------|-------------------------------------------------------------------------------:|
+  | Promotes consistency, since objects made with factory are compatible and consistent |                                                      Increased code complexity |
+  | Separates creation logic from main code                                             |   Limited use scope, best suited for specific sets of related families/objects |
+  | Increases code flexibility and scalability                                          |                                                                                |
+  | Promotes loose coupling                                                             |                                                                                |
 
 ![Abstract Factory UML Diagram](Assets/AbstractFactory.svg)
 
@@ -46,11 +46,11 @@ The Java code shows the actual implementation, while the UML diagrams make it ea
 - Purpose/intent: pattern that separates the construction process of a complex object from its representation, allowing different variations of an objects to be made from the same construction process
 - Ideal usage: when constructing and object requires a lot of parameters and many are optional
 
-| Pros                                             |                                                                             Cons |
-|:-------------------------------------------------|---------------------------------------------------------------------------------:|
-| - promotes separation of object creation and use |                                                      increased code complexity - |
-| - enhanced object configurability                | potential for inconsistency because of the flexibility of the building process - |
-| - improved code readability                      |                                                                                  |
+| Pros                                           |                                                                           Cons |
+|:-----------------------------------------------|-------------------------------------------------------------------------------:|
+| promotes separation of object creation and use |                                                      increased code complexity |
+| enhanced object configurability                | potential for inconsistency because of the flexibility of the building process |
+| improved code readability                      |                                                                                |
 
 ![Builder UML Diagram](Assets/Builder.svg)
 
@@ -68,11 +68,11 @@ The Java code shows the actual implementation, while the UML diagrams make it ea
 - Purpose/intent: Pattern ensures class has only 1 instance and provides a global access point to itself
 - Ideal usage: when it makes logical sense for there to be one instance of something (i.e. "will having two of these cause problems?")
 
-| Pros                                                        |                                                                         Cons |
-|:------------------------------------------------------------|-----------------------------------------------------------------------------:|
-| - provides a single well defined entry point to an instance |                                          Testing may require complex setup - |
-| - excels at resource & state management                     |                     pattern can get complex in multi-threaded environments - |
-| - allows for lazy initialization of resources               | often seen as an 'anti-pattern' because it tends to add complexity to code - |
+| Pros                                                      |                                                                       Cons |
+|:----------------------------------------------------------|---------------------------------------------------------------------------:|
+| provides a single well defined entry point to an instance |                                          Testing may require complex setup |
+| excels at resource & state management                     |                     pattern can get complex in multi-threaded environments |
+| allows for lazy initialization of resources               | often seen as an 'anti-pattern' because it tends to add complexity to code |
 
 ![Singleton UML Diagram](Assets/Singleton.svg)
 
