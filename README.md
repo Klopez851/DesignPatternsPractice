@@ -30,9 +30,18 @@ The Java code shows the actual implementation, while the UML diagrams make it ea
  Patterns that focus on streamlining the object creation portion of programming, giving you more 
  flexibility in how objects come into existance
 ### Abstract Factory
-- Purpose/intent:
-- Ideal usage:
-<!-- Add Abstract Factory UML diagram here -->
+- Purpose/intent:Patterns that provides an interface for creating families of related/dependent objects w/o specifying their concrete class
+- Ideal usage: when you are constantly creating multiple related objects that need to work together
+- 
+  | Pros                                                                                  |                                                                           Cons |
+  |:--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------:|
+  | - Promotes consistency, since objects made with factory are compatible and consistent |                                                    Increased code complexity - |
+  | - Separates creation logic from main code                                             | Limited use scope, best suited for specific sets of related families/objects - |
+- | - Increases code flexibility and scalability                                          |                                                                                |
+  | - Promotes loose coupling                                                             |                                                                                |
+
+![Abstract Factory UML Diagram](Assets/AbstractFactory.svg)
+
 ### Builder
 - Purpose/intent: pattern that separates the construction process of a complex object from its representation, allowing different variations of an objects to be made from the same construction process
 - Ideal usage: when constructing and object requires a lot of parameters and many are optional
