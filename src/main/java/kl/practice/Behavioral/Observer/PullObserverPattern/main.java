@@ -1,4 +1,4 @@
-package kl.practice.Behavioral.Observer;
+package kl.practice.Behavioral.Observer.PullObserverPattern;
 /*
 ============================================================
 OBSERVER DESIGN PATTERN — EXERCISE 1
@@ -332,4 +332,21 @@ After finishing both exercises, answer these in your own words:
 ============================================================
 */
 public class main {
+    public static void main(String[] args) {
+        WeatherStation station = new WeatherStation();
+
+        PhoneDisplay phone = new PhoneDisplay();
+        WindowDisplay window = new WindowDisplay();
+        StatisticsDisplay statistics = new StatisticsDisplay();
+
+        station.registerObserver(phone);
+        station.registerObserver(window);
+        station.registerObserver(statistics);
+
+        station.setTemperature(72);
+
+        station.setTemperature(75);
+
+        station.setTemperature(68);
+    }
 }
