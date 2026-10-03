@@ -55,9 +55,18 @@ The Java code shows the actual implementation, while the UML diagrams make it ea
 ![Builder UML Diagram](Assets/Builder.svg)
 
 ### Factory Method
-- Purpose/intent:
-- Ideal usage:
-<!-- Add Factory Method UML diagram here -->
+- Purpose/intent: Pattern that allows you to create objects using a superclass, this superclass delegates object 
+creation to its subclasses
+- Ideal usage: When you need an object but don't want the code requesting it to be tightly coupled with a specific 
+implementation of that object
+
+| Pros                                                                         |                                                                    Cons |
+|:-----------------------------------------------------------------------------|------------------------------------------------------------------------:|
+| Gives flexibility to introduce new types of products w/o much code changes   |                                               increased code complexity |
+| provides weak coupling/loose coupling of components                          | Can lead to code duplication if logic of implementations is too similar |
+| Separates object creation from the rest of the code so its more maintainable |                                                                         |
+
+![Factory Method UML Diagram](Assets/FactoryMethod.svg)
 
 ### Prototype
 - Purpose/intent:
