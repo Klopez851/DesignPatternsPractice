@@ -1,4 +1,4 @@
-# WORK IN PROGRESS !!!
+# README IS A WORK IN PROGRESS!!
 
 # Design Patterns in Java
 
