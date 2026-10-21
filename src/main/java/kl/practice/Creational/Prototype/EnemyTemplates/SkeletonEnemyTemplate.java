@@ -1,5 +1,7 @@
-package kl.practice.Creational.Prototype;
+package kl.practice.Creational.Prototype.EnemyTemplates;
 
+import kl.practice.Creational.Prototype.Enemy;
+import kl.practice.Creational.Prototype.Weapon;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,11 +14,11 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class GoblinEnemyTemplate implements Enemy{
-    private String name = "goblin", armor = "none";
+public class SkeletonEnemyTemplate implements Enemy {
+    private String name = "skeleton",armor = "leather";
     private Weapon weapon = new Weapon("bow", 15);
-    private int health = 50, attack = 10, defense = 15;
-    private double speed = 4.0;
+    private int health = 50, attack = 10, defense = 5;
+    private double speed = 3.0;
     private List<String> abilities = generateAbilities();
 
     @Override
@@ -24,19 +26,20 @@ public class GoblinEnemyTemplate implements Enemy{
         List<String> abilities = new ArrayList<>(this.abilities);
         return new GoblinEnemyTemplate(this.name,this.armor,new Weapon(this.weapon.name, this.weapon.damage), this.health,this.attack,
                 this.defense,this.speed,abilities);
-}
+    }
+
 
     public String toString(){
-        return "Goblin - Name: "+name+" weapon: "+weapon+" Armor: "+armor+" health: "+health+" attack: "+attack+
+        return "Goblin - Name: "+name+" weapon: "+weapon.toString()+" Armor: "+armor+" health: "+health+" attack: "+attack+
                 " defense: "+defense+" speed: "+speed+" abilities: "+abilities.toString();
     }
 
     private List<String> generateAbilities(){
         List<String> abilities = new ArrayList<>();
-        abilities.add("shoot arrow");
-        abilities.add("hide");
+        abilities.add("Bow");
+        abilities.add("bone throw");
         abilities.add("scream");
-        abilities.add("flee");
+        abilities.add("shield");
 
         return abilities;
     }

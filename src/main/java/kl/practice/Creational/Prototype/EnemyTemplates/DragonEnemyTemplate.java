@@ -1,5 +1,7 @@
-package kl.practice.Creational.Prototype;
+package kl.practice.Creational.Prototype.EnemyTemplates;
 
+import kl.practice.Creational.Prototype.Enemy;
+import kl.practice.Creational.Prototype.Weapon;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,21 +10,21 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
 @Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrcEnemyTemplate implements Enemy{
-    private String name = "orc", armor = "leather";
-    private Weapon weapon = new Weapon("axe", 20);
-    private int health = 100, attack = 15, defense = 30;
-    private double speed = 2.5;
+public class DragonEnemyTemplate implements Enemy {
+    private String name = "dragondeez", armor = "scales";
+    private Weapon weapon = new Weapon("claws", 30);
+    private int health = 300, attack = 60, defense = 50;
+    private double speed = 3.0;
     private List<String> abilities = generateAbilities();
 
     @Override
     public Enemy clone() {
         List<String> abilities = new ArrayList<>(this.abilities);
-        return new OrcEnemyTemplate(this.name,this.armor,new Weapon(this.weapon.name, this.weapon.damage), this.health,this.attack,
+        return new DragonEnemyTemplate(this.name,this.armor,new Weapon(this.weapon.name, this.weapon.damage), this.health,this.attack,
                 this.defense,this.speed,abilities);
     }
 
@@ -33,10 +35,10 @@ public class OrcEnemyTemplate implements Enemy{
 
     private List<String> generateAbilities(){
         List<String> abilities = new ArrayList<>();
-        abilities.add("axe swing");
-        abilities.add("stomp");
+        abilities.add("fire breath");
+        abilities.add("tail swoop");
         abilities.add("scream");
-        abilities.add("shield");
+        abilities.add("fly");
 
         return abilities;
     }

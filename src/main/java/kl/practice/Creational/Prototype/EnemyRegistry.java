@@ -1,5 +1,10 @@
 package kl.practice.Creational.Prototype;
 
+import kl.practice.Creational.Prototype.EnemyTemplates.DragonEnemyTemplate;
+import kl.practice.Creational.Prototype.EnemyTemplates.GoblinEnemyTemplate;
+import kl.practice.Creational.Prototype.EnemyTemplates.OrcEnemyTemplate;
+import kl.practice.Creational.Prototype.EnemyTemplates.SkeletonEnemyTemplate;
+
 public class EnemyRegistry {
     public static Enemy create(String enemy){
         return switch (enemy) {

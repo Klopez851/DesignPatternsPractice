@@ -338,6 +338,8 @@ package kl.practice.Creational.Prototype;
  *     How is this different from Factory Method?
  */
 
+import kl.practice.Creational.Prototype.EnemyTemplates.GoblinEnemyTemplate;
+
 public class Main {
     public static void main(String[] args) {
         GoblinEnemyTemplate goblinTemplate = new GoblinEnemyTemplate();

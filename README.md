@@ -69,9 +69,16 @@ implementation of that object
 ![Factory Method UML Diagram](Assets/FactoryMethod.svg)
 
 ### Prototype
-- Purpose/intent:
-- Ideal usage:
-<!-- Add Prototype UML diagram here -->
+- Purpose/intent: pattern that allows you to create new objects by copying/cloning existing objects
+- Ideal usage:use when object creation is resource intensive or unconventional and another object can serve as a 
+template when cloned
+
+| Pros                                                                                                    |                             Cons |
+|:--------------------------------------------------------------------------------------------------------|---------------------------------:|
+| can reduce the overhead that comes from creating and initializing objects from scratch                  |        increased code complexity |
+| flexibility of cloning allows for more agile development anvironments, becuase you can clone on the fly | Can create circular dependencies |
+
+![Factory Method UML Diagram](Assets/Prototype.svg)
 
 ### Singleton
 - Purpose/intent: Pattern ensures class has only 1 instance and provides a global access point to itself

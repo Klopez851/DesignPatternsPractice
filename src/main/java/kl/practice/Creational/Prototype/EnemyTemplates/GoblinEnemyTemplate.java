@@ -1,5 +1,7 @@
-package kl.practice.Creational.Prototype;
+package kl.practice.Creational.Prototype.EnemyTemplates;
 
+import kl.practice.Creational.Prototype.Enemy;
+import kl.practice.Creational.Prototype.Weapon;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,23 +10,23 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
-@Setter
 @Getter
-@NoArgsConstructor
+@Setter
 @AllArgsConstructor
-public class DragonEnemyTemplate implements Enemy{
-    private String name = "dragondeez", armor = "scales";
-    private Weapon weapon = new Weapon("claws", 30);
-    private int health = 300, attack = 60, defense = 50;
-    private double speed = 3.0;
+@NoArgsConstructor
+public class GoblinEnemyTemplate implements Enemy {
+    private String name = "goblin", armor = "none";
+    private Weapon weapon = new Weapon("bow", 15);
+    private int health = 50, attack = 10, defense = 15;
+    private double speed = 4.0;
     private List<String> abilities = generateAbilities();
 
     @Override
     public Enemy clone() {
         List<String> abilities = new ArrayList<>(this.abilities);
-        return new DragonEnemyTemplate(this.name,this.armor,new Weapon(this.weapon.name, this.weapon.damage), this.health,this.attack,
+        return new GoblinEnemyTemplate(this.name,this.armor,new Weapon(this.weapon.name, this.weapon.damage), this.health,this.attack,
                 this.defense,this.speed,abilities);
-    }
+}
 
     public String toString(){
         return "Goblin - Name: "+name+" weapon: "+weapon+" Armor: "+armor+" health: "+health+" attack: "+attack+
@@ -33,10 +35,10 @@ public class DragonEnemyTemplate implements Enemy{
 
     private List<String> generateAbilities(){
         List<String> abilities = new ArrayList<>();
-        abilities.add("fire breath");
-        abilities.add("tail swoop");
+        abilities.add("shoot arrow");
+        abilities.add("hide");
         abilities.add("scream");
-        abilities.add("fly");
+        abilities.add("flee");
 
         return abilities;
     }
