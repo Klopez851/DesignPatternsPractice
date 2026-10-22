@@ -28,7 +28,7 @@ The Java code shows the actual implementation, while the UML diagrams make it ea
 
 ## Creational Patterns
  Patterns that focus on streamlining the object creation portion of programming, giving you more 
- flexibility in how objects come into existance
+ flexibility in how objects come into existence
 ### Abstract Factory
 - Purpose/intent:Patterns that provides an interface for creating families of related/dependent objects w/o specifying their concrete class
 - Ideal usage: when you are constantly creating multiple related objects that need to work together
@@ -76,7 +76,7 @@ template when cloned
 | Pros                                                                                                    |                             Cons |
 |:--------------------------------------------------------------------------------------------------------|---------------------------------:|
 | can reduce the overhead that comes from creating and initializing objects from scratch                  |        increased code complexity |
-| flexibility of cloning allows for more agile development anvironments, becuase you can clone on the fly | Can create circular dependencies |
+| flexibility of cloning allows for more agile development environments, because you can clone on the fly | Can create circular dependencies |
 
 ![Factory Method UML Diagram](Assets/Prototype.svg)
 
@@ -95,9 +95,18 @@ template when cloned
 ## Structural Patterns
 <!-- add overall Purpose of this type of pattern -->
 Adapter
-- Purpose/intent:
-- Ideal usage:
-<!-- Add Adapter UML diagram here -->
+- Purpose/intent: Pattern that allows objects w/ incompatible interfaces to work together by providing a bridge
+between them, this bridge being the adapter.
+- Ideal usage: Adapting 2 existing incompatible interfaces
+
+| Pros                                                                           |                                    Cons |
+|:-------------------------------------------------------------------------------|----------------------------------------:|
+| Allows different interfaces to work together, ensuring effective communication |               Increased code complexity |
+| Encourages separation of concerns                                              |  Can take longer to maintain/understand |
+| Often used to integrate legacy code                                            | Adapters can add a performance overhead |
+|                                                                                |                     Limited flexibility |
+
+![Adapter UML Diagram](Assets/Adapter.svg)
 Bridge
 - Purpose/intent:
 - Ideal usage:
