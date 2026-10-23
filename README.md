@@ -108,9 +108,18 @@ between them, this bridge being the adapter.
 
 ![Adapter UML Diagram](Assets/Adapter.svg)
 Bridge
-- Purpose/intent:
+- Purpose/intent: pattern that separates abstraction from implementation, allowing them to evolve independently. 
+It decouples the implementation and abstraction
+  - Implementation (as used in this pattern): class/interface that does the low-level work
+  - abstraction (as used in this pattern): high-level control layer that does work using the implementation level class/interface
 - Ideal usage:
-<!-- Add Bridge UML diagram here -->
+
+| Pros                          |                      Cons |
+|:------------------------------|--------------------------:|
+| Offers significant decoupling | Increased code complexity |
+| Facilitated extension         |                           |
+
+![Bridge UML Diagram](Assets/Bridge.svg)
 Composite
 - Purpose/intent:
 - Ideal usage:
