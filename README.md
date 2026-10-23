@@ -93,8 +93,11 @@ template when cloned
 ![Singleton UML Diagram](Assets/Singleton.svg)
 
 ## Structural Patterns
-<!-- add overall Purpose of this type of pattern -->
-Adapter
+ Patterns that deal with how classes & objects are structured. 
+ Blueprints for building larger structure from individual parts.
+
+
+### Adapter
 - Purpose/intent: Pattern that allows objects w/ incompatible interfaces to work together by providing a bridge
 between them, this bridge being the adapter.
 - Ideal usage: Adapting 2 existing incompatible interfaces
@@ -107,7 +110,7 @@ between them, this bridge being the adapter.
 |                                                                                |                     Limited flexibility |
 
 ![Adapter UML Diagram](Assets/Adapter.svg)
-Bridge
+### Bridge
 - Purpose/intent: pattern that separates abstraction from implementation, allowing them to evolve independently. 
 It decouples the implementation and abstraction
   - Implementation (as used in this pattern): class/interface that does the low-level work
