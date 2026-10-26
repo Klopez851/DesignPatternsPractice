@@ -51,9 +51,9 @@ allowing different variations of an objects to be made from the same constructio
 
 | Pros                                           |                                                                           Cons |
 |:-----------------------------------------------|-------------------------------------------------------------------------------:|
-| promotes separation of object creation and use |                                                      increased code complexity |
-| enhanced object configurability                | potential for inconsistency because of the flexibility of the building process |
-| improved code readability                      |                                                                                |
+| Promotes separation of object creation and use |                                                      Increased code complexity |
+| Enhanced object configurability                | Potential for inconsistency because of the flexibility of the building process |
+| Improved code readability                      |                                                                                |
 
 ![Builder UML Diagram](Assets/Builder.svg)
 
@@ -65,8 +65,8 @@ implementation of that object.
 
 | Pros                                                                         |                                                                    Cons |
 |:-----------------------------------------------------------------------------|------------------------------------------------------------------------:|
-| Gives flexibility to introduce new types of products w/o much code changes   |                                               increased code complexity |
-| provides weak coupling/loose coupling of components                          | Can lead to code duplication if logic of implementations is too similar |
+| Gives flexibility to introduce new types of products w/o much code changes   |                                               Increased code complexity |
+| Provides weak coupling/loose coupling of components                          | Can lead to code duplication if logic of implementations is too similar |
 | Separates object creation from the rest of the code so its more maintainable |                                                                         |
 
 ![Factory Method UML Diagram](Assets/FactoryMethod.svg)
@@ -78,8 +78,8 @@ template when cloned.
 
 | Pros                                                                                                    |                             Cons |
 |:--------------------------------------------------------------------------------------------------------|---------------------------------:|
-| can reduce the overhead that comes from creating and initializing objects from scratch                  |        increased code complexity |
-| flexibility of cloning allows for more agile development environments, because you can clone on the fly | Can create circular dependencies |
+| Can reduce the overhead that comes from creating and initializing objects from scratch                  |        Increased code complexity |
+| Flexibility of cloning allows for more agile development environments, because you can clone on the fly | Can create circular dependencies |
 
 ![Factory Method UML Diagram](Assets/Prototype.svg)
 
@@ -90,9 +90,9 @@ template when cloned.
 
 | Pros                                                      |                                                                       Cons |
 |:----------------------------------------------------------|---------------------------------------------------------------------------:|
-| provides a single well defined entry point to an instance |                                          Testing may require complex setup |
-| excels at resource & state management                     |                     pattern can get complex in multi-threaded environments |
-| allows for lazy initialization of resources               | often seen as an 'anti-pattern' because it tends to add complexity to code |
+| Provides a single well defined entry point to an instance |                                          Testing may require complex setup |
+| Excels at resource & state management                     |                     Pattern can get complex in multi-threaded environments |
+| Allows for lazy initialization of resources               | Often seen as an 'anti-pattern' because it tends to add complexity to code |
 
 ![Singleton UML Diagram](Assets/Singleton.svg)
 
@@ -137,16 +137,25 @@ objects/object compositions to be handled uniformly.
 | Pros                                                                                             |                                                                                                             Cons |
 |:-------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------:|
 | Offers a unified interface                                                                       |                                                                                        Increased code complexity |
-| recursive structure is good for representing complex hierarchies in a clean and organized manner | Can have s big performance overhead, since in the worse case scenario you traverse the whole tree-like structure |
-| very flexible                                                                                    |                                                                 Complexity is not worth it for simpler scenarios |
+| Recursive structure is good for representing complex hierarchies in a clean and organized manner | Can have s big performance overhead, since in the worse case scenario you traverse the whole tree-like structure |
+| Very flexible                                                                                    |                                                                 Complexity is not worth it for simpler scenarios |
 
 ![Composite UML Diagram](Assets/Composite.svg)
 
 ### Decorator
-- Purpose/intent:
-- Ideal usage:
-<!-- Add Decorator UML diagram here -->
-Facade
+- Purpose/intent: Pattern that allows you to dynamically add behaviors/responsibilities to objects without changing 
+their code
+- Ideal usage: When an object has composable or mix-and-match additional responsibilities.
+
+| Pros                                         |                                                                             Cons |
+|:---------------------------------------------|---------------------------------------------------------------------------------:|
+| Adheres to the open/close principle          |                                                        Increased code complexity |
+| Provides flexible behavior extensions        | Order of wrapping matters, since depending on the order the end results may vary |
+| Encourages modularity/separation of concerns |                                                                                  |
+
+![Decorator UML Diagram](Assets/Decorator.svg)
+
+### Facade
 - Purpose/intent:
 - Ideal usage:
 <!-- Add Facade UML diagram here -->
