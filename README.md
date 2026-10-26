@@ -24,14 +24,16 @@ This repository is primarily a learning exercise and a reference for revisiting 
 I've also put together UML diagrams for each pattern implementation.
 
 The idea here is to have both the code and the conceptual view of each implementation readily available. 
-The Java code shows the actual implementation, while the UML diagrams make it easier to see how the pieces fit together and how the pattern is structured.
+The Java code shows the actual implementation, while the UML diagrams make it easier to see how the pieces fit together 
+and how the pattern is structured.
 
 ## Creational Patterns
  Patterns that focus on streamlining the object creation portion of programming, giving you more 
- flexibility in how objects come into existence
+ flexibility in how objects come into existence.
 ### Abstract Factory
-- Purpose/intent:Patterns that provides an interface for creating families of related/dependent objects w/o specifying their concrete class
-- Ideal usage: when you are constantly creating multiple related objects that need to work together
+- Purpose/intent: Pattern that provides an interface for creating families of related/dependent objects w/o specifying 
+their concrete class.
+- Ideal usage: When you are constantly creating multiple related objects that need to work together.
  
   | Pros                                                                                |                                                                           Cons |
   |:------------------------------------------------------------------------------------|-------------------------------------------------------------------------------:|
@@ -43,8 +45,9 @@ The Java code shows the actual implementation, while the UML diagrams make it ea
 ![Abstract Factory UML Diagram](Assets/AbstractFactory.svg)
 
 ### Builder
-- Purpose/intent: pattern that separates the construction process of a complex object from its representation, allowing different variations of an objects to be made from the same construction process
-- Ideal usage: when constructing and object requires a lot of parameters and many are optional
+- Purpose/intent: Pattern that separates the construction process of a complex object from its representation, 
+allowing different variations of an objects to be made from the same construction process.
+- Ideal usage: When constructing and object requires a lot of parameters and many are optional.
 
 | Pros                                           |                                                                           Cons |
 |:-----------------------------------------------|-------------------------------------------------------------------------------:|
@@ -56,9 +59,9 @@ The Java code shows the actual implementation, while the UML diagrams make it ea
 
 ### Factory Method
 - Purpose/intent: Pattern that allows you to create objects using a superclass, this superclass delegates object 
-creation to its subclasses
+creation to its subclasses.
 - Ideal usage: When you need an object but don't want the code requesting it to be tightly coupled with a specific 
-implementation of that object
+implementation of that object.
 
 | Pros                                                                         |                                                                    Cons |
 |:-----------------------------------------------------------------------------|------------------------------------------------------------------------:|
@@ -69,9 +72,9 @@ implementation of that object
 ![Factory Method UML Diagram](Assets/FactoryMethod.svg)
 
 ### Prototype
-- Purpose/intent: pattern that allows you to create new objects by copying/cloning existing objects
-- Ideal usage:use when object creation is resource intensive or unconventional and another object can serve as a 
-template when cloned
+- Purpose/intent: Pattern that allows you to create new objects by copying/cloning existing objects.
+- Ideal usage: Use when object creation is resource intensive or unconventional and another object can serve as a 
+template when cloned.
 
 | Pros                                                                                                    |                             Cons |
 |:--------------------------------------------------------------------------------------------------------|---------------------------------:|
@@ -81,8 +84,9 @@ template when cloned
 ![Factory Method UML Diagram](Assets/Prototype.svg)
 
 ### Singleton
-- Purpose/intent: Pattern ensures class has only 1 instance and provides a global access point to itself
-- Ideal usage: when it makes logical sense for there to be one instance of something (i.e. "will having two of these cause problems?")
+- Purpose/intent: Pattern ensures class has only 1 instance and provides a global access point to itself.
+- Ideal usage: When it makes logical sense for there to be one instance of something 
+(i.e. "will having two of these cause problems?").
 
 | Pros                                                      |                                                                       Cons |
 |:----------------------------------------------------------|---------------------------------------------------------------------------:|
@@ -96,11 +100,10 @@ template when cloned
  Patterns that deal with how classes & objects are structured. 
  Blueprints for building larger structure from individual parts.
 
-
 ### Adapter
 - Purpose/intent: Pattern that allows objects w/ incompatible interfaces to work together by providing a bridge
 between them, this bridge being the adapter.
-- Ideal usage: Adapting 2 existing incompatible interfaces
+- Ideal usage: Adapting 2 existing incompatible interfaces.
 
 | Pros                                                                           |                                    Cons |
 |:-------------------------------------------------------------------------------|----------------------------------------:|
@@ -111,11 +114,12 @@ between them, this bridge being the adapter.
 
 ![Adapter UML Diagram](Assets/Adapter.svg)
 ### Bridge
-- Purpose/intent: pattern that separates abstraction from implementation, allowing them to evolve independently. 
-It decouples the implementation and abstraction
-  - Implementation (as used in this pattern): class/interface that does the low-level work
-  - abstraction (as used in this pattern): high-level control layer that does work using the implementation level class/interface
-- Ideal usage:
+- Purpose/intent: Pattern that separates abstraction from implementation, allowing them to evolve independently. 
+It decouples the implementation and abstraction.
+  - Implementation (as used in this pattern): class/interface that does the low-level work.
+  - abstraction (as used in this pattern): high-level control layer that does work using the implementation 
+  level class/interface.
+- Ideal usage: When you have dimensions that need to work together while still evolving independently.
 
 | Pros                          |                      Cons |
 |:------------------------------|--------------------------:|
@@ -123,11 +127,22 @@ It decouples the implementation and abstraction
 | Facilitated extension         |                           |
 
 ![Bridge UML Diagram](Assets/Bridge.svg)
-Composite
-- Purpose/intent:
-- Ideal usage:
-<!-- Add Composite UML diagram here -->
-Decorator
+
+### Composite
+- Purpose/intent: Pattern that combines objects into a tree structure to represent part-whole hierarchies, allowing
+objects/object compositions to be handled uniformly.
+    - part-whole = complex objects (whole) composed of simpler parts (part).
+- Ideal usage: When one desires uniform treatment of part-whole objects.
+
+| Pros                                                                                             |                                                                                                             Cons |
+|:-------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------:|
+| Offers a unified interface                                                                       |                                                                                        Increased code complexity |
+| recursive structure is good for representing complex hierarchies in a clean and organized manner | Can have s big performance overhead, since in the worse case scenario you traverse the whole tree-like structure |
+| very flexible                                                                                    |                                                                 Complexity is not worth it for simpler scenarios |
+
+![Composite UML Diagram](Assets/Composite.svg)
+
+### Decorator
 - Purpose/intent:
 - Ideal usage:
 <!-- Add Decorator UML diagram here -->
