@@ -156,10 +156,18 @@ their code
 ![Decorator UML Diagram](Assets/Decorator.svg)
 
 ### Facade
-- Purpose/intent:
-- Ideal usage:
-<!-- Add Facade UML diagram here -->
-Flyweight
+- Purpose/intent: Pattern that provides a unified interface to a set of interfaces in a subsystem
+  Ideal usage: When you need a simplifies interface for a subsystem/s
+
+  | Pros                                                              |                                                                                                                Cons |
+  |:------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------:|
+  | Simplifies usage of a subsystem by providing a single entry point | Reduced flexibility, since facade makes it challenging to modify/expand subsystem without also modifying the facade |
+  | Encourages separation between client and subsystem classes        |                                                                                     Can lead to a bloated interface |
+  | Offers a way to organize code cleanly                             |                                                                                                                     |
+
+![Facade UML Diagram](Assets/Facade.svg)
+
+### Flyweight
 - Purpose/intent:
 - Ideal usage:
 <!-- Add Flyweight UML diagram here -->
