@@ -168,59 +168,197 @@ their code
 ![Facade UML Diagram](Assets/Facade.svg)
 
 ### Flyweight
-- Purpose/intent:
-- Ideal usage:
-<!-- Add Flyweight UML diagram here -->
-Proxy
-- Purpose/intent:
-- Ideal usage:
-<!-- Add Proxy UML diagram here -->
+- Purpose/intent: Pattern that focused on efficient sharing & reusing object state 
+- Ideal usage: When one wants to improve memory and states that can be shared by multiple objects exist
+
+  | Pros                                      |                                          Cons |
+  |:------------------------------------------|----------------------------------------------:|
+  | Improves memeory efficiency & performance |                     Increased code complexity |
+  | Aids in resource management               |                           Reduced Flexibility |
+  |                                           | Sharing vs Duplication decisions are critical |
+
+![Flyweight UML Diagram](Assets/Flyweight.svg)
+
+### Proxy
+- Purpose/intent: Pattern that provides a placeholder for another object, mainly controlling the access to said object
+- Ideal usage: When one wants a stand-in object that can provide access control and/or additional behaviors
+
+  | Pros                                    |                                                Cons |
+  |:----------------------------------------|----------------------------------------------------:|
+  | Enhances access controls                |                           Increased code complexity |
+  | Aids in inefficient resource management | Adds overhead because of extra layer of redirection |
+  | Can optimize system performance         |                                                     |
+  | Simplifies client code                  |                                                     |
+
+![Proxy UML Diagram](Assets/Proxy.svg)
+
 ## Behavioral Patterns
-<!-- add overall Purpose of this type of pattern -->
-Chain of Responsibility
+
+This group of patterns focus mainly on how objects communicate/interact and distribute responsibility with each other
+
+### Chain of Responsibility
+- Purpose/intent: Pattern that allows you to create a chain of objects, where each object can either handle a request 
+or pass it along to the next object
+- Ideal usage: Use when you have multiple possible handlers for a request
+
+  | Pros                           |                                        Cons |
+  |:-------------------------------|--------------------------------------------:|
+  | Decouples sender and receiver  |                               Order Matters |
+  | Very flexible                  |               Requests could go unprocessed |
+  | Suits changing requirements    | Comes with significant performance overhead |
+  | Enforces single responsibility |                                             |
+
+![Chain of Responsibility UML Diagram](Assets/ChainOfResponsibility.svg)
+### Command
 - Purpose/intent:
 - Ideal usage:
-<!-- Add Chain of Responsibility UML diagram here -->
-Command
+
+[//]: # ()
+[//]: # (  | Pros                          |                      Cons |)
+
+[//]: # (    |:------------------------------|--------------------------:|)
+
+[//]: # (  | Offers significant decoupling | Increased code complexity |)
+
+[//]: # (  | Facilitated extension         |                           |)
+
+[//]: # ()
+[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+### Interpreter
 - Purpose/intent:
 - Ideal usage:
-<!-- Add Command UML diagram here -->
-Interpreter
+
+[//]: # ()
+[//]: # (  | Pros                          |                      Cons |)
+
+[//]: # (    |:------------------------------|--------------------------:|)
+
+[//]: # (  | Offers significant decoupling | Increased code complexity |)
+
+[//]: # (  | Facilitated extension         |                           |)
+
+[//]: # ()
+[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+### Iterator
 - Purpose/intent:
 - Ideal usage:
-<!-- Add Interpreter UML diagram here -->
-Iterator
+
+[//]: # ()
+[//]: # (  | Pros                          |                      Cons |)
+
+[//]: # (    |:------------------------------|--------------------------:|)
+
+[//]: # (  | Offers significant decoupling | Increased code complexity |)
+
+[//]: # (  | Facilitated extension         |                           |)
+
+[//]: # ()
+[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+### Mediator
 - Purpose/intent:
 - Ideal usage:
-<!-- Add Iterator UML diagram here -->
-Mediator
+
+[//]: # ()
+[//]: # (  | Pros                          |                      Cons |)
+
+[//]: # (    |:------------------------------|--------------------------:|)
+
+[//]: # (  | Offers significant decoupling | Increased code complexity |)
+
+[//]: # (  | Facilitated extension         |                           |)
+
+[//]: # ()
+[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+### Memento
 - Purpose/intent:
 - Ideal usage:
-<!-- Add Mediator UML diagram here -->
-Memento
+
+[//]: # ()
+[//]: # (  | Pros                          |                      Cons |)
+
+[//]: # (    |:------------------------------|--------------------------:|)
+
+[//]: # (  | Offers significant decoupling | Increased code complexity |)
+
+[//]: # (  | Facilitated extension         |                           |)
+
+[//]: # ()
+[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+### Observer
 - Purpose/intent:
 - Ideal usage:
-<!-- Add Memento UML diagram here -->
-Observer
+
+[//]: # ()
+[//]: # (  | Pros                          |                      Cons |)
+
+[//]: # (    |:------------------------------|--------------------------:|)
+
+[//]: # (  | Offers significant decoupling | Increased code complexity |)
+
+[//]: # (  | Facilitated extension         |                           |)
+
+[//]: # ()
+[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+### State
 - Purpose/intent:
 - Ideal usage:
-<!-- Add Observer UML diagram here -->
-State
+
+[//]: # ()
+[//]: # (  | Pros                          |                      Cons |)
+
+[//]: # (    |:------------------------------|--------------------------:|)
+
+[//]: # (  | Offers significant decoupling | Increased code complexity |)
+
+[//]: # (  | Facilitated extension         |                           |)
+
+[//]: # ()
+[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+### Strategy
 - Purpose/intent:
 - Ideal usage:
-<!-- Add State UML diagram here -->
-Strategy
+
+[//]: # ()
+[//]: # (  | Pros                          |                      Cons |)
+
+[//]: # (    |:------------------------------|--------------------------:|)
+
+[//]: # (  | Offers significant decoupling | Increased code complexity |)
+
+[//]: # (  | Facilitated extension         |                           |)
+
+[//]: # ()
+[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+### Template Method
 - Purpose/intent:
 - Ideal usage:
-<!-- Add Strategy UML diagram here -->
-Template Method
+
+[//]: # ()
+[//]: # (  | Pros                          |                      Cons |)
+
+[//]: # (    |:------------------------------|--------------------------:|)
+
+[//]: # (  | Offers significant decoupling | Increased code complexity |)
+
+[//]: # (  | Facilitated extension         |                           |)
+
+[//]: # ()
+[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+### Visitor
 - Purpose/intent:
 - Ideal usage:
-<!-- Add Template Method UML diagram here -->
-Visitor
-- Purpose/intent:
-- Ideal usage:
-<!-- Add Visitor UML diagram here -->
+
+[//]: # ()
+[//]: # (  | Pros                          |                      Cons |)
+
+[//]: # (    |:------------------------------|--------------------------:|)
+
+[//]: # (  | Offers significant decoupling | Increased code complexity |)
+
+[//]: # (  | Facilitated extension         |                           |)
+
+[//]: # ()
+[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
 
 # What I Learned
 Implementing these patterns helped me understand a lot more about why architecture and planning matter when building software.
