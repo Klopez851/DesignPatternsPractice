@@ -220,20 +220,16 @@ or pass it along to the next object
 
 ![Command UML Diagram](Assets/Command.svg)
 ### Interpreter
-- Purpose/intent:
-- Ideal usage:
+- Purpose/intent: Pattern that provides a way to evaluate sentences/expression in a language; interpreter defines
+a language and its grammar in terms of a set of classes
+- Ideal usage: When one needs to evaluate a small/simple language or grammar
 
-[//]: # ()
-[//]: # (  | Pros                          |                      Cons |)
+  | Pros                        |                       Cons |
+  |:----------------------------|---------------------------:|
+  | Modular                     | Very limited applicability |
+  | System ca be very extensive |                            |
 
-[//]: # (    |:------------------------------|--------------------------:|)
-
-[//]: # (  | Offers significant decoupling | Increased code complexity |)
-
-[//]: # (  | Facilitated extension         |                           |)
-
-[//]: # ()
-[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+- Due to this pattern's very niche use case, I decided to skip implementing it.
 ### Iterator
 - Purpose/intent:
 - Ideal usage:
