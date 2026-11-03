@@ -210,20 +210,15 @@ or pass it along to the next object
 
 ![Chain of Responsibility UML Diagram](Assets/ChainOfResponsibility.svg)
 ### Command
-- Purpose/intent:
-- Ideal usage:
+- Purpose/intent: Pattern that turns a request into a standalone object containing all the request information
+- Ideal usage: When one wants to turn an action into an object
 
-[//]: # ()
-[//]: # (  | Pros                          |                      Cons |)
+  | Pros                          |                      Cons |
+  |:------------------------------|--------------------------:|
+  | Offers significant decoupling | Increased code complexity |
+  | Supports undo/redo            |                           |
 
-[//]: # (    |:------------------------------|--------------------------:|)
-
-[//]: # (  | Offers significant decoupling | Increased code complexity |)
-
-[//]: # (  | Facilitated extension         |                           |)
-
-[//]: # ()
-[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+![Command UML Diagram](Assets/Command.svg)
 ### Interpreter
 - Purpose/intent:
 - Ideal usage:
@@ -394,3 +389,45 @@ to actually practice the patterns instead of just reading about them.
 Design Patterns: Elements of Reusable Object-Oriented Software — I also have the original Gang of Four (GoF) book, 
 which I plan to read as I continue learning. My goal is to use it to go deeper into the ideas behind the patterns and 
 better understand the reasoning that led to them.
+
+
+
+
+
+Another tough lesson I've learned recently:
+
+I thought I could skip the LeetCode grinding phase.
+
+When I started teaching myself after graduation, I wanted to focus on learning skills that are actually used in the 
+industry. I wanted to understand how applications are built, how APIs work, how databases fit into the picture, and 
+how to put all of those pieces together; You know, learn what it takes to develop real 
+applications.
+
+I figured that if I focused enough on becoming a better developer, I'd be able to avoid spending countless hours 
+solving algorithm problems. Since you know, I didn't particularly want to spend months grinding algorithm problems.
+
+Well, after yet another failed technical assessment, I've come to realize that there probably isn't any skipping this 
+phase.
+
+As much as I might not enjoy the idea of grinding LeetCode problems, they serve as somewhat of a secret handshake in 
+the industry.
+
+Being able to solve these problems at a certain level demonstrates a baseline understanding of data structures and 
+algorithms. It also shows that you've put in the time to understand these concepts and apply them to unfamiliar problems.
+
+And whether I agree with how heavily they're emphasized in technical interviews or not, they're clearly something 
+I need to get better at.
+
+Like it or not, it's a part of the process.
+
+So, Clarity is going to have to take a bit of a backseat for now.
+
+It's time to start my LeetCode grinding journey.
+
+Hopefully, I'll come out on the other side not only better prepared for technical assessments, but also a better 
+programmer.
+
+Another lesson learned. Hopefully, future me will appreciate the effort.
+
+
+#LeetCode #DataStructuresAndAlgorithms #SoftwareEngineering #CareerGrowth #LearningInPublic
