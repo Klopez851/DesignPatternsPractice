@@ -144,7 +144,7 @@ objects/object compositions to be handled uniformly.
 
 ### Decorator
 - Purpose/intent: Pattern that allows you to dynamically add behaviors/responsibilities to objects without changing 
-their code
+their code.
 - Ideal usage: When an object has composable or mix-and-match additional responsibilities.
 
 | Pros                                         |                                                                             Cons |
@@ -156,8 +156,8 @@ their code
 ![Decorator UML Diagram](Assets/Decorator.svg)
 
 ### Facade
-- Purpose/intent: Pattern that provides a unified interface to a set of interfaces in a subsystem
-  Ideal usage: When you need a simplifies interface for a subsystem/s
+- Purpose/intent: Pattern that provides a unified interface to a set of interfaces in a subsystem.
+  Ideal usage: When you need a simplifies interface for a subsystem/s.
 
   | Pros                                                              |                                                                                                                Cons |
   |:------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------:|
@@ -168,8 +168,8 @@ their code
 ![Facade UML Diagram](Assets/Facade.svg)
 
 ### Flyweight
-- Purpose/intent: Pattern that focused on efficient sharing & reusing object state 
-- Ideal usage: When one wants to improve memory and states that can be shared by multiple objects exist
+- Purpose/intent: Pattern that focused on efficient sharing & reusing object state.
+- Ideal usage: When one wants to improve memory and states that can be shared by multiple objects exist.
 
   | Pros                                      |                                          Cons |
   |:------------------------------------------|----------------------------------------------:|
@@ -180,8 +180,8 @@ their code
 ![Flyweight UML Diagram](Assets/Flyweight.svg)
 
 ### Proxy
-- Purpose/intent: Pattern that provides a placeholder for another object, mainly controlling the access to said object
-- Ideal usage: When one wants a stand-in object that can provide access control and/or additional behaviors
+- Purpose/intent: Pattern that provides a placeholder for another object, mainly controlling the access to said object.
+- Ideal usage: When one wants a stand-in object that can provide access control and/or additional behaviors.
 
   | Pros                                    |                                                Cons |
   |:----------------------------------------|----------------------------------------------------:|
@@ -194,12 +194,12 @@ their code
 
 ## Behavioral Patterns
 
-This group of patterns focus mainly on how objects communicate/interact and distribute responsibility with each other
+This group of patterns focus mainly on how objects communicate/interact and distribute responsibility with each other.
 
 ### Chain of Responsibility
 - Purpose/intent: Pattern that allows you to create a chain of objects, where each object can either handle a request 
-or pass it along to the next object
-- Ideal usage: Use when you have multiple possible handlers for a request
+or pass it along to the next object.
+- Ideal usage: Use when you have multiple possible handlers for a request.
 
   | Pros                           |                                        Cons |
   |:-------------------------------|--------------------------------------------:|
@@ -210,8 +210,8 @@ or pass it along to the next object
 
 ![Chain of Responsibility UML Diagram](Assets/ChainOfResponsibility.svg)
 ### Command
-- Purpose/intent: Pattern that turns a request into a standalone object containing all the request information
-- Ideal usage: When one wants to turn an action into an object
+- Purpose/intent: Pattern that turns a request into a standalone object containing all the request information.
+- Ideal usage: When one wants to turn an action into an object.
 
   | Pros                          |                      Cons |
   |:------------------------------|--------------------------:|
@@ -221,8 +221,8 @@ or pass it along to the next object
 ![Command UML Diagram](Assets/Command.svg)
 ### Interpreter
 - Purpose/intent: Pattern that provides a way to evaluate sentences/expression in a language; interpreter defines
-a language and its grammar in terms of a set of classes
-- Ideal usage: When one needs to evaluate a small/simple language or grammar
+a language and its grammar in terms of a set of classes.
+- Ideal usage: When one needs to evaluate a small/simple language or grammar.
 
   | Pros                        |                       Cons |
   |:----------------------------|---------------------------:|
@@ -233,8 +233,8 @@ a language and its grammar in terms of a set of classes
 
 ### Iterator
 - Purpose/intent: Patterb that provides a way to access elements of a collection without exposing its underlying 
-representation
-- Ideal usage: When you need to traverse a collection in a way that doesn't expose the underlying implementations
+representation.
+- Ideal usage: When you need to traverse a collection in a way that doesn't expose the underlying implementations.
 
   | Pros                                              |                      Cons |
   |:--------------------------------------------------|--------------------------:|
@@ -244,53 +244,48 @@ representation
 
 ![Iterator UML Diagram](Assets/Iterator.svg)
 ### Mediator
-- Purpose/intent:
-- Ideal usage:
+- Purpose/intent: Pattern that facilitates communication between different objects without them needing to be 
+aware of each other or having direct coupling. Mediator is the central point.
+- Ideal usage: When many objects communicate with each other in complicated ways.
 
-[//]: # ()
-[//]: # (  | Pros                          |                      Cons |)
+  | Pros                    |                                                           Cons |
+  |:------------------------|---------------------------------------------------------------:|
+  | Offers loose coupling   |                                      Increased code complexity |
+  | Facilitates maintenance | Can become single point of failure or a performance bottleneck |
+  | Centralized control     |                                  Limits component independence |
+  | Scalable                |                                           Performance overhead |
+![Mediator UML Diagram](Assets/Mediator.svg)
 
-[//]: # (    |:------------------------------|--------------------------:|)
-
-[//]: # (  | Offers significant decoupling | Increased code complexity |)
-
-[//]: # (  | Facilitated extension         |                           |)
-
-[//]: # ()
-[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
 ### Memento
-- Purpose/intent:
-- Ideal usage:
+- Purpose/intent: Pattern that captures and externalizes the internal state of an object without breaking its 
+encapsulation.
+- Ideal usage: WHen one needs to save/restore an objects state.
 
-[//]: # ()
-[//]: # (  | Pros                          |                      Cons |)
+  | Pros                     |                                    Cons |
+  |:-------------------------|----------------------------------------:|
+  | Good at state management |                 High Memory consumption |
+  |                          | Can introduce some performance overhead |
+  |                          |                   Limited Applicability |
 
-[//]: # (    |:------------------------------|--------------------------:|)
 
-[//]: # (  | Offers significant decoupling | Increased code complexity |)
+![Memento UML Diagram](Assets/Memento.svg)
 
-[//]: # (  | Facilitated extension         |                           |)
-
-[//]: # ()
-[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
 ### Observer
-- Purpose/intent:
-- Ideal usage:
+- Purpose/intent: Pattern that defines a one to many relationship between objects, where changes in one object are 
+communicated to and reflected in other objects automatically.
+- Ideal usage: When multiple objects need to react when something changes.
 
-[//]: # ()
-[//]: # (  | Pros                          |                      Cons |)
+  | Pros                                      |                                                                           Cons |
+    |:------------------------------------------|-------------------------------------------------------------------------------:|
+  | Supports dynamic updates                  |                                                      Increased code complexity |
+  | Ensures efficient Communication           |                                Unexpected changes with excessive state changes |
+  | Helps maintain consistency across systems | Publisher doesn't know how to prioritize order in which observers are notified |
 
-[//]: # (    |:------------------------------|--------------------------:|)
+![Observer UML Diagram](Assets/Observer.svg)
 
-[//]: # (  | Offers significant decoupling | Increased code complexity |)
-
-[//]: # (  | Facilitated extension         |                           |)
-
-[//]: # ()
-[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
 ### State
-- Purpose/intent:
-- Ideal usage:
+- Purpose/intent: Pattern that allows an object to change its behavior when its internal state changes
+- Ideal usage: When an objects behavior changes depending on its current state.
 
 [//]: # ()
 [//]: # (  | Pros                          |                      Cons |)
@@ -304,8 +299,9 @@ representation
 [//]: # ()
 [//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
 ### Strategy
-- Purpose/intent:
-- Ideal usage:
+- Purpose/intent: Pattern that defines a family of interchangeable algorithms, allowing them to be selected and 
+used dynamically at runtime. THis pattern also allows algorithms to be encapsulated in separate classes.
+- Ideal usage: WHen you have multiple interchangeable ways to perform an operation.
 
 [//]: # ()
 [//]: # (  | Pros                          |                      Cons |)
@@ -319,8 +315,9 @@ representation
 [//]: # ()
 [//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
 ### Template Method
-- Purpose/intent:
-- Ideal usage:
+- Purpose/intent: Pattern that defines the skeleton of an algorithm in a base class, allowing the subclasses to provide  
+specific implementations for certain steps without changing the algorithm structure.
+- Ideal usage: When several algorithms follow the same overall steps but only differ in the specifics.
 
 [//]: # ()
 [//]: # (  | Pros                          |                      Cons |)
@@ -334,8 +331,8 @@ representation
 [//]: # ()
 [//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
 ### Visitor
-- Purpose/intent:
-- Ideal usage:
+- Purpose/intent: Pattern that allows you to add new operations to an existing class without modifying its structure.
+- Ideal usage: When one needs to add operations to a stable object structure without modifying its classes.
 
 [//]: # ()
 [//]: # (  | Pros                          |                      Cons |)
