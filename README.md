@@ -230,21 +230,19 @@ a language and its grammar in terms of a set of classes
   | System ca be very extensive |                            |
 
 - Due to this pattern's very niche use case, I decided to skip implementing it.
+
 ### Iterator
-- Purpose/intent:
-- Ideal usage:
+- Purpose/intent: Patterb that provides a way to access elements of a collection without exposing its underlying 
+representation
+- Ideal usage: When you need to traverse a collection in a way that doesn't expose the underlying implementations
 
-[//]: # ()
-[//]: # (  | Pros                          |                      Cons |)
+  | Pros                                              |                      Cons |
+  |:--------------------------------------------------|--------------------------:|
+  | Decouples the traversal from the collection       | Increased code complexity |
+  | Provides a uniform interface                      |     Limited functionality |
+  | Can handle iterating over complex data structures |                           |
 
-[//]: # (    |:------------------------------|--------------------------:|)
-
-[//]: # (  | Offers significant decoupling | Increased code complexity |)
-
-[//]: # (  | Facilitated extension         |                           |)
-
-[//]: # ()
-[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+![Iterator UML Diagram](Assets/Iterator.svg)
 ### Mediator
 - Purpose/intent:
 - Ideal usage:

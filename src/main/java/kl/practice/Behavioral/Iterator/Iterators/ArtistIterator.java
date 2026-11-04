@@ -1,6 +1,5 @@
 package kl.practice.Behavioral.Iterator.Iterators;
 
-import kl.practice.Behavioral.Iterator.Iterator;
 import kl.practice.Behavioral.Iterator.Song;
 
 import java.util.List;

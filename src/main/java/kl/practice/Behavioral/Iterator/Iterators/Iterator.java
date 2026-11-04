@@ -1,4 +1,4 @@
-package kl.practice.Behavioral.Iterator;
+package kl.practice.Behavioral.Iterator.Iterators;
 
 public interface Iterator<T> {
     boolean hasNext();

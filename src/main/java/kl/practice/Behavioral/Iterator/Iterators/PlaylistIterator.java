@@ -1,8 +1,6 @@
 package kl.practice.Behavioral.Iterator.Iterators;
 
 
-import kl.practice.Behavioral.Iterator.Iterator;
-
 import java.util.List;
 
 

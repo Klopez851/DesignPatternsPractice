@@ -1,5 +1,6 @@
 package kl.practice.Behavioral.Iterator;
 
+import kl.practice.Behavioral.Iterator.Iterators.Iterator;
 import kl.practice.Behavioral.Iterator.Playlists.Playlist;
 import kl.practice.Behavioral.Iterator.Playlists.SongPlaylist;
 
