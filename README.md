@@ -293,7 +293,7 @@ communicated to and reflected in other objects automatically.
   | Offers flexibility                 | Ordering/transitions between states can become tricky |
   | Adheres to te open/close principle |                                                       |
 
-[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+![State UML Diagram](Assets/State.svg)
 ### Strategy
 - Purpose/intent: Pattern that defines a family of interchangeable algorithms, allowing them to be selected and 
 used dynamically at runtime. THis pattern also allows algorithms to be encapsulated in separate classes.
@@ -317,7 +317,7 @@ specific implementations for certain steps without changing the algorithm struct
   | Offers some flexibility                                                                        | Can be challenging to maintain |
   | Promotes separation of concerns (high level algorithm from "low level" implementation details) |                                |
 
-[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+![Template Method UML Diagram](Assets/Template.svg)
 ### Visitor
 - Purpose/intent: Pattern that allows you to add new operations to an existing class without modifying its structure.
 - Ideal usage: When one needs to add operations to a stable object structure without modifying its classes.
