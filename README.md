@@ -287,63 +287,48 @@ communicated to and reflected in other objects automatically.
 - Purpose/intent: Pattern that allows an object to change its behavior when its internal state changes
 - Ideal usage: When an objects behavior changes depending on its current state.
 
-[//]: # ()
-[//]: # (  | Pros                          |                      Cons |)
+  | Pros                               |                                                  Cons |
+    |:-----------------------------------|------------------------------------------------------:|
+  | Often leads to cleaner code        |                             Increased code complexity |
+  | Offers flexibility                 | Ordering/transitions between states can become tricky |
+  | Adheres to te open/close principle |                                                       |
 
-[//]: # (    |:------------------------------|--------------------------:|)
-
-[//]: # (  | Offers significant decoupling | Increased code complexity |)
-
-[//]: # (  | Facilitated extension         |                           |)
-
-[//]: # ()
 [//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
 ### Strategy
 - Purpose/intent: Pattern that defines a family of interchangeable algorithms, allowing them to be selected and 
 used dynamically at runtime. THis pattern also allows algorithms to be encapsulated in separate classes.
 - Ideal usage: WHen you have multiple interchangeable ways to perform an operation.
 
-[//]: # ()
-[//]: # (  | Pros                          |                      Cons |)
+  | Pros                                |                                                                   Cons |
+    |:------------------------------------|-----------------------------------------------------------------------:|
+  | Offers flexibility and adaptability |                                              Increased code complexity |
+  | Promotes separation of concerns     | Client is burdened with selecting and providing of the proper strategy |
+  | Adheres to the open/close principle |                                                                        |
 
-[//]: # (    |:------------------------------|--------------------------:|)
-
-[//]: # (  | Offers significant decoupling | Increased code complexity |)
-
-[//]: # (  | Facilitated extension         |                           |)
-
-[//]: # ()
 [//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
 ### Template Method
 - Purpose/intent: Pattern that defines the skeleton of an algorithm in a base class, allowing the subclasses to provide  
 specific implementations for certain steps without changing the algorithm structure.
 - Ideal usage: When several algorithms follow the same overall steps but only differ in the specifics.
 
-[//]: # ()
-[//]: # (  | Pros                          |                      Cons |)
+  | Pros                                                                                           |                           Cons |
+    |:-----------------------------------------------------------------------------------------------|-------------------------------:|
+  | Promotes code reuse                                                                            |      Increased code complexity |
+  | Offers some flexibility                                                                        | Can be challenging to maintain |
+  | Promotes separation of concerns (high level algorithm from "low level" implementation details) |                                |
 
-[//]: # (    |:------------------------------|--------------------------:|)
-
-[//]: # (  | Offers significant decoupling | Increased code complexity |)
-
-[//]: # (  | Facilitated extension         |                           |)
-
-[//]: # ()
 [//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
 ### Visitor
 - Purpose/intent: Pattern that allows you to add new operations to an existing class without modifying its structure.
 - Ideal usage: When one needs to add operations to a stable object structure without modifying its classes.
 
-[//]: # ()
-[//]: # (  | Pros                          |                      Cons |)
 
-[//]: # (    |:------------------------------|--------------------------:|)
+  | Pros                                                                                     |                           Cons |
+    |:-----------------------------------------------------------------------------------------|-------------------------------:|
+  | Encourages separation of concerns                                                        |      Increased code complexity |
+  | Adheres to the open/close principle                                                      | Could lead to code duplication |
+  | Double dispatch (enables method to be classed based on both the element and the visitor) |         Application is limited |
 
-[//]: # (  | Offers significant decoupling | Increased code complexity |)
-
-[//]: # (  | Facilitated extension         |                           |)
-
-[//]: # ()
 [//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
 
 # What I Learned
@@ -380,45 +365,3 @@ to actually practice the patterns instead of just reading about them.
 Design Patterns: Elements of Reusable Object-Oriented Software — I also have the original Gang of Four (GoF) book, 
 which I plan to read as I continue learning. My goal is to use it to go deeper into the ideas behind the patterns and 
 better understand the reasoning that led to them.
-
-
-
-
-
-Another tough lesson I've learned recently:
-
-I thought I could skip the LeetCode grinding phase.
-
-When I started teaching myself after graduation, I wanted to focus on learning skills that are actually used in the 
-industry. I wanted to understand how applications are built, how APIs work, how databases fit into the picture, and 
-how to put all of those pieces together; You know, learn what it takes to develop real 
-applications.
-
-I figured that if I focused enough on becoming a better developer, I'd be able to avoid spending countless hours 
-solving algorithm problems. Since you know, I didn't particularly want to spend months grinding algorithm problems.
-
-Well, after yet another failed technical assessment, I've come to realize that there probably isn't any skipping this 
-phase.
-
-As much as I might not enjoy the idea of grinding LeetCode problems, they serve as somewhat of a secret handshake in 
-the industry.
-
-Being able to solve these problems at a certain level demonstrates a baseline understanding of data structures and 
-algorithms. It also shows that you've put in the time to understand these concepts and apply them to unfamiliar problems.
-
-And whether I agree with how heavily they're emphasized in technical interviews or not, they're clearly something 
-I need to get better at.
-
-Like it or not, it's a part of the process.
-
-So, Clarity is going to have to take a bit of a backseat for now.
-
-It's time to start my LeetCode grinding journey.
-
-Hopefully, I'll come out on the other side not only better prepared for technical assessments, but also a better 
-programmer.
-
-Another lesson learned. Hopefully, future me will appreciate the effort.
-
-
-#LeetCode #DataStructuresAndAlgorithms #SoftwareEngineering #CareerGrowth #LearningInPublic
