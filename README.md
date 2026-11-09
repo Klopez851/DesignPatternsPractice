@@ -305,7 +305,7 @@ used dynamically at runtime. THis pattern also allows algorithms to be encapsula
   | Promotes separation of concerns     | Client is burdened with selecting and providing of the proper strategy |
   | Adheres to the open/close principle |                                                                        |
 
-[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+![Strategy UML Diagram](Assets/Strategy.svg)
 ### Template Method
 - Purpose/intent: Pattern that defines the skeleton of an algorithm in a base class, allowing the subclasses to provide  
 specific implementations for certain steps without changing the algorithm structure.
@@ -322,14 +322,13 @@ specific implementations for certain steps without changing the algorithm struct
 - Purpose/intent: Pattern that allows you to add new operations to an existing class without modifying its structure.
 - Ideal usage: When one needs to add operations to a stable object structure without modifying its classes.
 
-
   | Pros                                                                                     |                           Cons |
     |:-----------------------------------------------------------------------------------------|-------------------------------:|
   | Encourages separation of concerns                                                        |      Increased code complexity |
   | Adheres to the open/close principle                                                      | Could lead to code duplication |
   | Double dispatch (enables method to be classed based on both the element and the visitor) |         Application is limited |
 
-[//]: # (![Facade UML Diagram]&#40;Assets/Facade.svg&#41;)
+![Visitor UML Diagram](Assets/Visitor.svg)
 
 # What I Learned
 Implementing these patterns helped me understand a lot more about why architecture and planning matter when building software.

@@ -1,9 +1,5 @@
 package kl.practice.Behavioral.Strategy.ShoppingApplication;
 
-import kl.practice.Behavioral.Strategy.DistanceCalculator.Strategies.CyclingRouteStrategy;
-import kl.practice.Behavioral.Strategy.DistanceCalculator.Strategies.DrivingRouteStrategy;
-import kl.practice.Behavioral.Strategy.DistanceCalculator.Strategies.NavigationService;
-import kl.practice.Behavioral.Strategy.DistanceCalculator.Strategies.WalkingRouteStrategy;
 import kl.practice.Behavioral.Strategy.ShoppingApplication.Strategies.BankTransferPayment;
 import kl.practice.Behavioral.Strategy.ShoppingApplication.Strategies.CreditCardPayment;
 import kl.practice.Behavioral.Strategy.ShoppingApplication.Strategies.CryptoPayment;

@@ -1,5 +1,6 @@
-package kl.practice.Behavioral.Strategy.DistanceCalculator.Strategies;
+package kl.practice.Behavioral.Strategy.DistanceCalculator;
 
+import kl.practice.Behavioral.Strategy.DistanceCalculator.Strategies.RouteStrategy;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
