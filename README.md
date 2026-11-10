@@ -1,5 +1,3 @@
-# README IS A WORK IN PROGRESS!!
-
 # Design Patterns in Java
 
 Instead of just reading about each pattern, I wanted to actually sit down and implement all of them in Java. The goal was to get a 
@@ -9,7 +7,7 @@ Each pattern has its own implementation using standard Java classes and interfac
 
 ## Patterns Covered
 
-The repository includes implementations of all 23 classic GoF patterns across three categories:
+The repository covers of all 23 classic GoF patterns across three categories:
 
 - Creational Patterns — 5 patterns
 
@@ -42,7 +40,9 @@ their concrete class.
   | Increases code flexibility and scalability                                          |                                                                                |
   | Promotes loose coupling                                                             |                                                                                |
 
-![Abstract Factory UML Diagram](Assets/AbstractFactory.svg)
+<p align="center">
+  <img src="Assets/AbstractFactory.svg" alt="Abstract Factory UML Diagram">
+</p>
 
 ### Builder
 - Purpose/intent: Pattern that separates the construction process of a complex object from its representation, 
@@ -55,7 +55,9 @@ allowing different variations of an objects to be made from the same constructio
 | Enhanced object configurability                | Potential for inconsistency because of the flexibility of the building process |
 | Improved code readability                      |                                                                                |
 
-![Builder UML Diagram](Assets/Builder.svg)
+<p align="center">
+  <img src="Assets/Builder.svg" alt="Builder UML Diagram">
+</p>
 
 ### Factory Method
 - Purpose/intent: Pattern that allows you to create objects using a superclass, this superclass delegates object 
@@ -69,7 +71,9 @@ implementation of that object.
 | Provides weak coupling/loose coupling of components                          | Can lead to code duplication if logic of implementations is too similar |
 | Separates object creation from the rest of the code so its more maintainable |                                                                         |
 
-![Factory Method UML Diagram](Assets/FactoryMethod.svg)
+<p align="center">
+  <img src="Assets/FactoryMethod.svg" alt="Factory Method UML Diagram">
+</p>
 
 ### Prototype
 - Purpose/intent: Pattern that allows you to create new objects by copying/cloning existing objects.
@@ -81,7 +85,9 @@ template when cloned.
 | Can reduce the overhead that comes from creating and initializing objects from scratch                  |        Increased code complexity |
 | Flexibility of cloning allows for more agile development environments, because you can clone on the fly | Can create circular dependencies |
 
-![Factory Method UML Diagram](Assets/Prototype.svg)
+<p align="center">
+  <img src="Assets/Prototype.svg" alt="Prototype UML Diagram">
+</p>
 
 ### Singleton
 - Purpose/intent: Pattern ensures class has only 1 instance and provides a global access point to itself.
@@ -94,7 +100,9 @@ template when cloned.
 | Excels at resource & state management                     |                     Pattern can get complex in multi-threaded environments |
 | Allows for lazy initialization of resources               | Often seen as an 'anti-pattern' because it tends to add complexity to code |
 
-![Singleton UML Diagram](Assets/Singleton.svg)
+<p align="center">
+  <img src="Assets/Singleton.svg" alt="Singleton UML Diagram">
+</p>
 
 ## Structural Patterns
  Patterns that deal with how classes & objects are structured. 
@@ -112,7 +120,10 @@ between them, this bridge being the adapter.
 | Often used to integrate legacy code                                            | Adapters can add a performance overhead |
 |                                                                                |                     Limited flexibility |
 
-![Adapter UML Diagram](Assets/Adapter.svg)
+<p align="center">
+  <img src="Assets/Adapter.svg" alt="Adapter UML Diagram">
+</p>
+
 ### Bridge
 - Purpose/intent: Pattern that separates abstraction from implementation, allowing them to evolve independently. 
 It decouples the implementation and abstraction.
@@ -126,7 +137,9 @@ It decouples the implementation and abstraction.
 | Offers significant decoupling | Increased code complexity |
 | Facilitated extension         |                           |
 
-![Bridge UML Diagram](Assets/Bridge.svg)
+<p align="center">
+  <img src="Assets/Bridge.svg" alt="Bridge UML Diagram">
+</p>
 
 ### Composite
 - Purpose/intent: Pattern that combines objects into a tree structure to represent part-whole hierarchies, allowing
@@ -137,10 +150,12 @@ objects/object compositions to be handled uniformly.
 | Pros                                                                                             |                                                                                                             Cons |
 |:-------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------:|
 | Offers a unified interface                                                                       |                                                                                        Increased code complexity |
-| Recursive structure is good for representing complex hierarchies in a clean and organized manner | Can have s big performance overhead, since in the worse case scenario you traverse the whole tree-like structure |
+| Recursive structure is good for representing complex hierarchies in a clean and organized manner | Can have a big performance overhead, since in the worse case scenario you traverse the whole tree-like structure |
 | Very flexible                                                                                    |                                                                 Complexity is not worth it for simpler scenarios |
 
-![Composite UML Diagram](Assets/Composite.svg)
+<p align="center">
+  <img src="Assets/Composite.svg" alt="Composite pattern UML Diagram">
+</p>
 
 ### Decorator
 - Purpose/intent: Pattern that allows you to dynamically add behaviors/responsibilities to objects without changing 
@@ -153,11 +168,13 @@ their code.
 | Provides flexible behavior extensions        | Order of wrapping matters, since depending on the order the end results may vary |
 | Encourages modularity/separation of concerns |                                                                                  |
 
-![Decorator UML Diagram](Assets/Decorator.svg)
+<p align="center">
+  <img src="Assets/Decorator.svg" alt="Decorator UML Diagram">
+</p>
 
 ### Facade
 - Purpose/intent: Pattern that provides a unified interface to a set of interfaces in a subsystem.
-  Ideal usage: When you need a simplifies interface for a subsystem/s.
+  Ideal usage: When you need a simplified interface for a subsystem/s.
 
   | Pros                                                              |                                                                                                                Cons |
   |:------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------:|
@@ -165,19 +182,23 @@ their code.
   | Encourages separation between client and subsystem classes        |                                                                                     Can lead to a bloated interface |
   | Offers a way to organize code cleanly                             |                                                                                                                     |
 
-![Facade UML Diagram](Assets/Facade.svg)
+<p align="center">
+  <img src="Assets/Facade.svg" alt="Facade UML Diagram">
+</p>
 
 ### Flyweight
 - Purpose/intent: Pattern that focused on efficient sharing & reusing object state.
 - Ideal usage: When one wants to improve memory and states that can be shared by multiple objects exist.
 
-  | Pros                                      |                                          Cons |
-  |:------------------------------------------|----------------------------------------------:|
-  | Improves memeory efficiency & performance |                     Increased code complexity |
-  | Aids in resource management               |                           Reduced Flexibility |
-  |                                           | Sharing vs Duplication decisions are critical |
+  | Pros                                     |                                          Cons |
+  |:-----------------------------------------|----------------------------------------------:|
+  | Improves memory efficiency & performance |                     Increased code complexity |
+  | Aids in resource management              |                           Reduced Flexibility |
+  |                                          | Sharing vs Duplication decisions are critical |
 
-![Flyweight UML Diagram](Assets/Flyweight.svg)
+<p align="center">
+  <img src="Assets/Flyweight.svg" alt="Flyweight UML Diagram">
+</p>
 
 ### Proxy
 - Purpose/intent: Pattern that provides a placeholder for another object, mainly controlling the access to said object.
@@ -190,7 +211,9 @@ their code.
   | Can optimize system performance         |                                                     |
   | Simplifies client code                  |                                                     |
 
-![Proxy UML Diagram](Assets/Proxy.svg)
+<p align="center">
+  <img src="Assets/Proxy.svg" alt="Proxy UML Diagram">
+</p>
 
 ## Behavioral Patterns
 
@@ -208,7 +231,10 @@ or pass it along to the next object.
   | Suits changing requirements    | Comes with significant performance overhead |
   | Enforces single responsibility |                                             |
 
-![Chain of Responsibility UML Diagram](Assets/ChainOfResponsibility.svg)
+<p align="center">
+  <img src="Assets/ChainOfResponsibility.svg" alt="Chain Of Responsibility UML Diagram">
+</p>
+
 ### Command
 - Purpose/intent: Pattern that turns a request into a standalone object containing all the request information.
 - Ideal usage: When one wants to turn an action into an object.
@@ -218,21 +244,24 @@ or pass it along to the next object.
   | Offers significant decoupling | Increased code complexity |
   | Supports undo/redo            |                           |
 
-![Command UML Diagram](Assets/Command.svg)
+<p align="center">
+  <img src="Assets/Command.svg" alt="Command Pattern UML Diagram">
+</p>
+
 ### Interpreter
 - Purpose/intent: Pattern that provides a way to evaluate sentences/expression in a language; interpreter defines
 a language and its grammar in terms of a set of classes.
 - Ideal usage: When one needs to evaluate a small/simple language or grammar.
 
-  | Pros                        |                       Cons |
-  |:----------------------------|---------------------------:|
-  | Modular                     | Very limited applicability |
-  | System ca be very extensive |                            |
+  | Pros                         |                       Cons |
+  |:-----------------------------|---------------------------:|
+  | Modular                      | Very limited applicability |
+  | System can be very extensive |                            |
 
 - Due to this pattern's very niche use case, I decided to skip implementing it.
 
 ### Iterator
-- Purpose/intent: Patterb that provides a way to access elements of a collection without exposing its underlying 
+- Purpose/intent: Pattern that provides a way to access elements of a collection without exposing its underlying 
 representation.
 - Ideal usage: When you need to traverse a collection in a way that doesn't expose the underlying implementations.
 
@@ -242,7 +271,10 @@ representation.
   | Provides a uniform interface                      |     Limited functionality |
   | Can handle iterating over complex data structures |                           |
 
-![Iterator UML Diagram](Assets/Iterator.svg)
+<p align="center">
+  <img src="Assets/Iterator.svg" alt="Iterator UML Diagram">
+</p>
+
 ### Mediator
 - Purpose/intent: Pattern that facilitates communication between different objects without them needing to be 
 aware of each other or having direct coupling. Mediator is the central point.
@@ -254,12 +286,15 @@ aware of each other or having direct coupling. Mediator is the central point.
   | Facilitates maintenance | Can become single point of failure or a performance bottleneck |
   | Centralized control     |                                  Limits component independence |
   | Scalable                |                                           Performance overhead |
-![Mediator UML Diagram](Assets/Mediator.svg)
+
+<p align="center">
+  <img src="Assets/Mediator.svg" alt="Mediator UML Diagram">
+</p>
 
 ### Memento
 - Purpose/intent: Pattern that captures and externalizes the internal state of an object without breaking its 
 encapsulation.
-- Ideal usage: WHen one needs to save/restore an objects state.
+- Ideal usage: When one needs to save/restore an object's state.
 
   | Pros                     |                                    Cons |
   |:-------------------------|----------------------------------------:|
@@ -268,10 +303,12 @@ encapsulation.
   |                          |                   Limited Applicability |
 
 
-![Memento UML Diagram](Assets/Memento.svg)
+<p align="center">
+  <img src="Assets/Memento.svg" alt="Memento UML Diagram">
+</p>
 
 ### Observer
-- Purpose/intent: Pattern that defines a one to many relationship between objects, where changes in one object are 
+- Purpose/intent: Pattern that defines a one-to-many relationship between objects, where changes in one object are 
 communicated to and reflected in other objects automatically.
 - Ideal usage: When multiple objects need to react when something changes.
 
@@ -281,23 +318,28 @@ communicated to and reflected in other objects automatically.
   | Ensures efficient Communication           |                                Unexpected changes with excessive state changes |
   | Helps maintain consistency across systems | Publisher doesn't know how to prioritize order in which observers are notified |
 
-![Observer UML Diagram](Assets/Observer.svg)
+<p align="center">
+  <img src="Assets/Observer.svg" alt="Observer UML Diagram">
+</p>
 
 ### State
 - Purpose/intent: Pattern that allows an object to change its behavior when its internal state changes
-- Ideal usage: When an objects behavior changes depending on its current state.
+- Ideal usage: When an object's behavior changes depending on its current state.
 
-  | Pros                               |                                                  Cons |
-    |:-----------------------------------|------------------------------------------------------:|
-  | Often leads to cleaner code        |                             Increased code complexity |
-  | Offers flexibility                 | Ordering/transitions between states can become tricky |
-  | Adheres to te open/close principle |                                                       |
+  | Pros                                |                                                  Cons |
+    |:------------------------------------|------------------------------------------------------:|
+  | Often leads to cleaner code         |                             Increased code complexity |
+  | Offers flexibility                  | Ordering/transitions between states can become tricky |
+  | Adheres to the open/close principle |                                                       |
 
-![State UML Diagram](Assets/State.svg)
+<p align="center">
+  <img src="Assets/State.svg" alt="State UML Diagram">
+</p>
+
 ### Strategy
 - Purpose/intent: Pattern that defines a family of interchangeable algorithms, allowing them to be selected and 
-used dynamically at runtime. THis pattern also allows algorithms to be encapsulated in separate classes.
-- Ideal usage: WHen you have multiple interchangeable ways to perform an operation.
+used dynamically at runtime. This pattern also allows algorithms to be encapsulated in separate classes.
+- Ideal usage: When you have multiple interchangeable ways to perform an operation.
 
   | Pros                                |                                                                   Cons |
     |:------------------------------------|-----------------------------------------------------------------------:|
@@ -305,7 +347,10 @@ used dynamically at runtime. THis pattern also allows algorithms to be encapsula
   | Promotes separation of concerns     | Client is burdened with selecting and providing of the proper strategy |
   | Adheres to the open/close principle |                                                                        |
 
-![Strategy UML Diagram](Assets/Strategy.svg)
+<p align="center">
+  <img src="Assets/Strategy.svg" alt="Strategy UML Diagram">
+</p>
+
 ### Template Method
 - Purpose/intent: Pattern that defines the skeleton of an algorithm in a base class, allowing the subclasses to provide  
 specific implementations for certain steps without changing the algorithm structure.
@@ -317,18 +362,23 @@ specific implementations for certain steps without changing the algorithm struct
   | Offers some flexibility                                                                        | Can be challenging to maintain |
   | Promotes separation of concerns (high level algorithm from "low level" implementation details) |                                |
 
-![Template Method UML Diagram](Assets/Template.svg)
+<p align="center">
+  <img src="Assets/Template.svg" alt="Template UML Diagram">
+</p>
+
 ### Visitor
 - Purpose/intent: Pattern that allows you to add new operations to an existing class without modifying its structure.
 - Ideal usage: When one needs to add operations to a stable object structure without modifying its classes.
 
-  | Pros                                                                                     |                           Cons |
-    |:-----------------------------------------------------------------------------------------|-------------------------------:|
-  | Encourages separation of concerns                                                        |      Increased code complexity |
-  | Adheres to the open/close principle                                                      | Could lead to code duplication |
-  | Double dispatch (enables method to be classed based on both the element and the visitor) |         Application is limited |
+  | Pros                                                                                    |                           Cons |
+    |:----------------------------------------------------------------------------------------|-------------------------------:|
+  | Encourages separation of concerns                                                       |      Increased code complexity |
+  | Adheres to the open/close principle                                                     | Could lead to code duplication |
+  | Double dispatch (enables method to be called based on both the element and the visitor) |         Application is limited |
 
-![Visitor UML Diagram](Assets/Visitor.svg)
+<p align="center">
+  <img src="Assets/Visitor.svg" alt="Visitor UML Diagram">
+</p>
 
 # What I Learned
 Implementing these patterns helped me understand a lot more about why architecture and planning matter when building software.

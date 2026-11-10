@@ -19,8 +19,8 @@ public class User {
     public void sendMessage(String message){
         chatroom.sendMessage(this, message);
     }
-    public void sendPrivateMethod(String receiver, String message){
-        chatroom.sendPrivateMethod(this, receiver,message);
+    public void sendPrivateMessage(String receiver, String message){
+        chatroom.sendPrivateMessage(this, receiver,message);
     }
 
     public void recieveMessage(User sender, String message){

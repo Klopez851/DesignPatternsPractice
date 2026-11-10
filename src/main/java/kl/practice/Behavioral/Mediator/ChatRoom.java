@@ -19,9 +19,9 @@ public class ChatRoom {
             }
         }
     }
-    public void sendPrivateMethod(User sender, String reciever, String message){
+    public void sendPrivateMessage(User sender, String receiver, String message){
         for(User user : registeredUsers){
-            if(user.getName().equals(reciever)){
+            if(user.getName().equals(receiver)){
                 if(user.isStatus()) {
                     user.recieveMessage(sender, message);
                 }else{

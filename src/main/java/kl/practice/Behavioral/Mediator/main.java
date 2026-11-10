@@ -313,6 +313,6 @@ public class main {
         chatRoom.registerUser(charlie);
 
         alice.sendMessage("Hello everyone!");
-        alice.sendPrivateMethod("bob", "Hello to you specially <3");
+        alice.sendPrivateMessage("bob", "Hello to you specially <3");
     }
 }
