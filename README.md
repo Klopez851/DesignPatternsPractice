@@ -7,7 +7,7 @@ Each pattern has its own implementation using standard Java classes and interfac
 
 ## Patterns Covered
 
-The repository covers of all 23 classic GoF patterns across three categories:
+The repository covers all 23 classic GoF patterns across three categories:
 
 - Creational Patterns — 5 patterns
 
